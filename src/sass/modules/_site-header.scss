@@ -1,0 +1,19 @@
+.site-header {
+    // box model
+    height: 200px;
+    padding: 25px;
+    
+    // visual
+    background-color: #c8d6e1;
+    background-image: url('./img/header-bg-s-2x.jpg');
+    background-position: center center;
+    background-size: cover;
+
+    @include atTabletsPortrait {
+        // box model
+        height: 300px;
+
+        // visual
+        background-image: url('./img/header-bg-l-1x.jpg');
+    }
+}

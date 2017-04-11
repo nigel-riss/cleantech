@@ -1,0 +1,15 @@
+.hero {
+    // box model
+    padding: 15px 0;
+    // visual
+    background-color: #5096f8;
+    background-image: url('./img/hero-bg-s.jpg');
+
+    &__wrapper {
+        // box model
+        padding: 25px;
+        
+        // visual
+        background-color: rgba(#ffffff, 0.85);
+    }
+}

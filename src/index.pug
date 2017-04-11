@@ -3,14 +3,15 @@ doctype html
 head
     meta(name="viewport",
         content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic")
     link(rel="stylesheet", href="styles.css")
 
 body
     header.site-header
-        .logo: img
-
         .search-n-lang
             .search
+
+        .logo: img(src="./img/logo.png")
 
         nav.main-nav: ul
             - var list = ["О компании", "Новости", "Услуги", "Проекты", "Партнеры", "Вакансии", "Отзывы", "Контакты"];
@@ -18,7 +19,8 @@ body
                 li
                     a(href="#")= list[i]
         
-        section.hero
+    section.hero
+        .hero__wrapper
             p.hero__welcome Добро пожаловать
             h1.hero__title Baltic Clean Technologies
             p.hero__subtitle Clean Solutions for Your Life
@@ -26,45 +28,45 @@ body
                 | Наша организация занимается работой в сфере оптовой и разничной торговли оборудования систем энергообеспечения на базе возобновляемых источников энергии, а также систем водоочистки и переработки отходов
             a(href='about.html').button О компании
 
-        section.services
-            h2.services__title Наши услуги
-            mixin service-item(title, text, iconUrl)
-                article.service-item
-                    .service-item__icon: img(src=iconUrl, alt=title)
-                    h3.service-item__title= title
-                    p.service-item__text= text
-            +service-item("Проектирование", "Проектирование и консалтинг проектов ВИЭ", "./img/icons/")
-            +service-item("Обслуживание", "Обслужинвание объектов ВИЭ, услуги ОЕМ", "./img/icons/")
-            +service-item("Поставка оборудования", "Поставка оборудования для проектов ВИЭ", "./img/icons/")
-            +service-item("Монтаж оборудования", "Монтаж оборудования и пуско-наладочные работы", "./img/icons/")
+    section.services
+        h2.services__title Наши услуги
+        mixin service-item(title, text, iconUrl)
+            article.service-item
+                .service-item__icon: img(src=iconUrl, alt=title)
+                h3.service-item__title= title
+                p.service-item__text= text
+        +service-item("Проектирование", "Проектирование и консалтинг проектов ВИЭ", "./img/icons/project.png")
+        +service-item("Обслуживание", "Обслужинвание объектов ВИЭ, услуги ОЕМ", "./img/icons/service.png")
+        +service-item("Поставка оборудования", "Поставка оборудования для проектов ВИЭ", "./img/icons/delivery.png")
+        +service-item("Монтаж оборудования", "Монтаж оборудования и пуско-наладочные работы", "./img/icons/mount.png")
 
-            a(href="#").button Все услуги
+        a(href="#").button Все услуги
 
-            p.services__subtitle По направлениям
-            mixin service-item-dir(title, iconUrl)
-                article.service-item-dir
-                    .service-item-dir__icon: img(src=iconUrl, alt=title)
-                    h3.service-item-dir__title= title
-            +service-item-dir("Переработка отходов", "./img/icons/")
-            +service-item-dir("Возобновляемые источники энергии", "./img/icons/")
-            +service-item-dir("Водоочистка", "./img/icons/")
-            +service-item-dir("Повышение энергоэффективности", "./img/icons/")
+        p.services__subtitle По направлениям
+        mixin service-item-dir(title, iconUrl)
+            article.service-item-dir
+                .service-item-dir__icon: img(src=iconUrl, alt=title)
+                h3.service-item-dir__title= title
+        +service-item-dir("Переработка отходов", "./img/icons/recycle.png")
+        +service-item-dir("Возобновляемые источники энергии", "./img/icons/solar.png")
+        +service-item-dir("Водоочистка", "./img/icons/water.png")
+        +service-item-dir("Повышение энергоэффективности", "./img/icons/energy.png")
 
-        section.section.section--news
-            h2.section__title Новости
-            mixin news-item(imgUrl, day, month, year, title, text)
-                article.news-item
-                    .news-item__image: img(src=imgUrl)
-                    header.news-item__header
-                        .news-item__day= day
-                        .news-item__date= month + ", " + year
-                        .news-item__title= title
-                    .news-item__content
-                        .news-item__text= text
-                        a(href="#").news-item__more Читать дальше...
-            +news-item("./img/", "07", "февраля", "2017", "Скандал с выбросами VW", "К таким выводам пришли члены Европейского парламента, обсуждавшие результаты надавнего скандала с концерном Фольксваген")
-            +news-item("./img/", "10", "ферваля", "2017", "Микропластик в Балтике", "Шведское агентство по химическим веществам (KEMI) проведет в 2017 году исследование о расширении списка запрещенных косметических продуктов")
-            +news-item("./img/", "12", "февраля", "2017", "Новый проект фонда НЕФКО", "НЕФКО - Северная экологическая финансовая корпорация, подписала договор об инвестициях в свой первый сельскохозяйственный проект")
+    section.section.section--news
+        h2.section__title Новости
+        mixin news-item(imgUrl, day, month, year, title, text)
+            article.news-item
+                .news-item__image: img(src=imgUrl)
+                header.news-item__header
+                    .news-item__day= day
+                    .news-item__date= month + ", " + year
+                    .news-item__title= title
+                .news-item__content
+                    .news-item__text= text
+                    a(href="#").news-item__more Читать дальше...
+        +news-item("./img/news/photo-1.jpg", "07", "февраля", "2017", "Скандал с выбросами VW", "К таким выводам пришли члены Европейского парламента, обсуждавшие результаты надавнего скандала с концерном Фольксваген")
+        +news-item("./img/news/photo-2.jpg", "10", "ферваля", "2017", "Микропластик в Балтике", "Шведское агентство по химическим веществам (KEMI) проведет в 2017 году исследование о расширении списка запрещенных косметических продуктов")
+        +news-item("./img/news/photo-3.jpg", "12", "февраля", "2017", "Новый проект фонда НЕФКО", "НЕФКО - Северная экологическая финансовая корпорация, подписала договор об инвестициях в свой первый сельскохозяйственный проект")
 
     footer.site-footer
         .contact-block
