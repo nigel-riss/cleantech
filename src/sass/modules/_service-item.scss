@@ -1,14 +1,57 @@
 .service-item {
+    // positioning
+    position: relative;
+
+    // box model
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 1px 0;
+    min-height: 77px;
+
     &__icon {
+        // positioning
+        position: absolute;
+
+        // box model
+        height: 77px;
+        width: 77px;
+        padding: 8px;
+
         // visual
         background-color: $mainBlue;
+        border-radius: 10px;
+
+        img {
+            // box model
+            height: 100%;
+            width: 100%;
+        }
     }
 
     &__title {
+        // box model
+        margin: 0;
+        margin-top: -3px;
+        padding: 0;
+        padding-left: 90px;
 
+        // typography
+        color: $mainTitle;
+        font-size: 1rem;
+        font-weight: 700;
+        text-transform: uppercase;
     }
 
     &__text {
+        // box model
+        margin: 0;
+        padding: 0;
+        padding-left: 90px;
+        padding-top: 3px;
 
+        // typography
+        color: $mainCopy;
+        font-size: 0.875em;
+        line-height: 1.4;
     }
 }

@@ -1,0 +1,124 @@
+.news-item {
+    // box model
+    padding: 25px;
+
+    &:hover {
+        // visual
+        background-color: $lighterBlue;
+    }
+
+    &__image {
+        // box model
+        margin-left: -25px;
+
+        img {
+            // box model
+            width: 100%;
+        }
+    }
+
+    &__header {
+        // positioning
+        position: relative;
+
+        // box model
+        margin-bottom: 5px;
+        padding-top: 25px;
+        overflow: hidden;
+        height: 85px;
+        // border: 1px solid red;
+
+        &::after {
+            content: "";
+
+            // positioning
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            // box model
+            // border: 1px solid red;
+            height: 100%;
+            width: 80px;
+
+            // visual
+            // background-image: url('./img/fade-tw.png');
+        }
+    }
+
+    &__day {
+        // positioning
+        position: absolute;
+
+        // box model
+        height: 40px;
+        width: 40px;
+
+        // typography
+        color: $mainSand;
+        font-size: 1.25rem;
+        font-weight: 700;
+        line-height: 38px;
+        text-align: center;
+
+        // visual
+        border: 1px solid $mainSand;
+    }
+
+    &__date {
+        // box model
+        margin-top: -4px;
+        padding-left: 50px;
+
+        // typography
+        color: $mainSand;
+        font-size: 1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    &__title {
+        // box model
+        margin: 0;
+        padding: 0;
+        padding-left: 50px;
+
+        // typography
+        color: $mainTitle;
+        font-size: 1rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        // white-space: nowrap;
+    }
+
+    &__content {
+        // box model
+        padding: 0;
+    }
+
+    &__text {
+        // box model
+        margin: 0;
+        padding: 0;
+
+        // typography
+        color: $mainCopy;
+        font-size: 0.875rem;
+    }
+
+    &__more {
+        // box model
+        display: block;
+        margin-top: 25px;
+
+        // typography
+        color: $mainSand;
+        font-size: 1rem;
+        text-decoration: none;
+
+        &:hover {
+            // typography
+            color: $mainBlue;
+        }
+    }
+}

@@ -1,3 +1,25 @@
 .services {
-    
+    // box model
+    padding: 25px;
+
+    // visual
+    background-image: linear-gradient(87deg, $lightBlue 0, $lightBlue 65%, #ffffff 65.25%, #ffffff 100%);
+
+    &__title {
+        // box model
+        display: inline-block;
+        margin-bottom: 30px;
+
+        // typography
+        color: $mainTitle;
+        font-size: 1.375rem;
+        font-weight: 700;
+        text-transform: uppercase;
+
+        @include blueUnderline;
+    }
+
+    &__subtitle {
+
+    }
 }

@@ -1,0 +1,16 @@
+.section {
+    // box model
+    padding: 25px 0;
+    
+    &__title {
+        // box model
+        display: inline-block;
+        margin-left: 25px;
+
+        // typography
+        font-size: 1.375rem;
+        text-transform: uppercase;
+
+        @include blueUnderline;
+    }
+}

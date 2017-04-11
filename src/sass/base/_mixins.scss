@@ -29,3 +29,25 @@
         @content;
     }
 }
+
+// deco
+
+@mixin blueUnderline {
+    // positioning
+    position: relative;
+
+    &::before {
+        content: "";
+
+        // positioning
+        position: absolute;
+        bottom: -4px;
+
+        // box model
+        height: 2px;
+        width: 100%;
+
+        // visual
+        background-color: $mainBlue;
+    }
+}

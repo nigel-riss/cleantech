@@ -4,12 +4,47 @@
     // visual
     background-color: #5096f8;
     background-image: url('./img/hero-bg-s.jpg');
+    background-size: cover;
+    background-position: right center;
 
     &__wrapper {
         // box model
         padding: 25px;
-        
+
         // visual
         background-color: rgba(#ffffff, 0.85);
+    }
+
+    &__welcome {
+        // box model
+        display: inline-block;
+
+        // typography
+        color: $mainTitle;
+        font-size: 1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+
+        @include blueUnderline;
+    }
+
+    &__title {
+        // typography
+        color: $mainTitle;
+        font-size: 2.25rem;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+
+    &__subtitle {
+        // typography
+        color: $mainBlue;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        // typography
+        color: $mainCopy;
     }
 }

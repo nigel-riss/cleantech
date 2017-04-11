@@ -1,9 +1,37 @@
 .service-item-dir {
-    &__icon {
+    // positioning
+    position: relative;
 
+    // box model
+    display: table;
+    min-height: 55px;
+    margin-bottom: 20px;
+    
+    &__icon {
+        // positioning
+        position: absolute;
+
+        // box model
+        height: 55px;
+        width: 55px;
+
+        img {
+            // box model
+            height: 100%;
+            width: 100%;
+        }
     }
 
     &__title {
-        
+        // box model
+        display: table-cell;
+        vertical-align: middle;
+        margin: 0;
+        padding-left: 67px;
+
+        // typography
+        font-size: 0.875rem;
+        font-weight: 400;
+        text-transform: uppercase;
     }
 }
