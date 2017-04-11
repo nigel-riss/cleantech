@@ -5,3 +5,48 @@
 
 html {
   font-size: 16px; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open sans", sans-serif;
+  font-size: 16px; }
+
+.site-header {
+  height: 200px;
+  padding: 25px;
+  background-color: #c8d6e1;
+  background-image: url("./img/header-bg-s-2x.jpg");
+  background-position: center center;
+  background-size: cover; }
+  @media (min-width: 700px) {
+    .site-header {
+      height: 300px;
+      background-image: url("./img/header-bg-l-1x.jpg"); } }
+
+.logo {
+  height: 103px;
+  width: 204px; }
+  .logo img {
+    height: 100%;
+    width: 100%; }
+
+.main-nav {
+  visibility: hidden; }
+
+.hero {
+  padding: 15px 0;
+  background-color: #5096f8;
+  background-image: url("./img/hero-bg-s.jpg"); }
+  .hero__wrapper {
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.85); }
+
+.service-item__icon {
+  background-color: #00a0e3; }
+
+.site-footer {
+  background-color: #e7edf5;
+  background-image: url("./img/footer-bg-s.jpg");
+  background-position: center center;
+  background-size: cover; }
