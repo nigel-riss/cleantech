@@ -1,0 +1,28 @@
+.contact-block {
+    &__title {
+        // positioning
+        position: relative;
+
+        // typography
+        color: $mainTitle;
+        font-size: 1.25rem;
+        font-weight: 700;
+        text-transform: uppercase;
+
+        &::after {
+            content: "";
+
+            // positioning
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+
+            // box model
+            height: 2px;
+            width: 50px;
+
+            // visual
+            background-color: $mainBlue;
+        }
+    }
+}

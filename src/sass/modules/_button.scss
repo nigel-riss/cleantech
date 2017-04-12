@@ -1,3 +1,14 @@
 .button {
-    
+    // box model
+    padding: 10px 15px;
+
+    // typography
+    color: $mainTitle;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    // visual
+    border: 2px solid $mainBlue;
 }

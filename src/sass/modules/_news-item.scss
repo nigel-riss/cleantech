@@ -26,24 +26,6 @@
         padding-top: 25px;
         overflow: hidden;
         height: 85px;
-        // border: 1px solid red;
-
-        &::after {
-            content: "";
-
-            // positioning
-            position: absolute;
-            top: 0;
-            right: 0;
-
-            // box model
-            // border: 1px solid red;
-            height: 100%;
-            width: 80px;
-
-            // visual
-            // background-image: url('./img/fade-tw.png');
-        }
     }
 
     &__day {

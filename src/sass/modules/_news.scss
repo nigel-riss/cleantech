@@ -1,0 +1,7 @@
+.news {
+    @include atTabletsLandscape {
+        // box model
+        width: 900px;
+        margin: 0 auto;
+    }
+}

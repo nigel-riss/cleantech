@@ -9,7 +9,9 @@ head
 body
     header.site-header
         .search-n-lang
+            .menu-icon: .menu-icon__middle
             .search
+            .language
 
         .logo: img(src="./img/logo.png")
 
@@ -29,30 +31,31 @@ body
             a(href='about.html').button О компании
 
     section.services
-        h2.services__title Наши услуги
-        mixin service-item(title, text, iconUrl)
-            article.service-item
-                .service-item__icon: img(src=iconUrl, alt=title)
-                h3.service-item__title= title
-                p.service-item__text= text
-        +service-item("Проектирование", "Проектирование и консалтинг проектов ВИЭ", "./img/icons/project.png")
-        +service-item("Обслуживание", "Обслужинвание объектов ВИЭ, услуги ОЕМ", "./img/icons/service.png")
-        +service-item("Поставка оборудования", "Поставка оборудования для проектов ВИЭ", "./img/icons/delivery.png")
-        +service-item("Монтаж оборудования", "Монтаж оборудования и пуско-наладочные работы", "./img/icons/mount.png")
+        .services__main
+            h2.services__title Наши услуги
+            mixin service-item(title, text, iconUrl)
+                article.service-item
+                    .service-item__icon: img(src=iconUrl, alt=title)
+                    h3.service-item__title= title
+                    p.service-item__text= text
+            +service-item("Проектирование", "Проектирование и консалтинг проектов ВИЭ", "./img/icons/project.png")
+            +service-item("Обслуживание", "Обслужинвание объектов ВИЭ, услуги ОЕМ", "./img/icons/service.png")
+            +service-item("Поставка оборудования", "Поставка оборудования для проектов ВИЭ", "./img/icons/delivery.png")
+            +service-item("Монтаж оборудования", "Монтаж оборудования и пуско-наладочные работы", "./img/icons/mount.png")
 
-        a(href="#").button Все услуги
+            a(href="#").button Все услуги
+        .services__dir
+            p.services__subtitle По направлениям
+            mixin service-item-dir(title, iconUrl)
+                article.service-item-dir
+                    .service-item-dir__icon: img(src=iconUrl, alt=title)
+                    h3.service-item-dir__title= title
+            +service-item-dir("Переработка отходов", "./img/icons/recycle.png")
+            +service-item-dir("Возобновляемые источники энергии", "./img/icons/solar.png")
+            +service-item-dir("Водоочистка", "./img/icons/water.png")
+            +service-item-dir("Повышение энергоэффективности", "./img/icons/energy.png")
 
-        p.services__subtitle По направлениям
-        mixin service-item-dir(title, iconUrl)
-            article.service-item-dir
-                .service-item-dir__icon: img(src=iconUrl, alt=title)
-                h3.service-item-dir__title= title
-        +service-item-dir("Переработка отходов", "./img/icons/recycle.png")
-        +service-item-dir("Возобновляемые источники энергии", "./img/icons/solar.png")
-        +service-item-dir("Водоочистка", "./img/icons/water.png")
-        +service-item-dir("Повышение энергоэффективности", "./img/icons/energy.png")
-
-    section.section.section--news
+    section.section.section--news.news
         h2.section__title Новости
         mixin news-item(imgUrl, day, month, year, title, text)
             article.news-item

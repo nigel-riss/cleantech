@@ -1,9 +1,40 @@
 .services {
     // box model
     padding: 25px;
+    padding-bottom: 40px;
+
+    // typography
+    font-size: 0;
 
     // visual
-    background-image: linear-gradient(87deg, $lightBlue 0, $lightBlue 65%, #ffffff 65.25%, #ffffff 100%);
+    background-image: linear-gradient(87deg, $lightBlue 0, $lightBlue 65%, #f6f6f6 65.25%, #f6f6f6 100%);
+
+    @include atTabletsLandscape {
+        // box model
+        width: 800px;
+        margin: 0 auto;
+    }
+
+    &__main {
+        @include atTabletsPortrait {
+            // box model
+            display: inline-block;
+            vertical-align: top;
+            width: 50%;
+            padding-right: 20px;
+            // border: 1px solid red;
+        }
+    }
+
+    &__dir {
+        @include atTabletsPortrait {
+            // box model
+            display: inline-block;
+            vertical-align: top;
+            width: 50%;
+            // border: 1px solid red;
+        }
+    }
 
     &__title {
         // box model
@@ -20,6 +51,21 @@
     }
 
     &__subtitle {
+        // box model
+        display: inline-block;
+        margin-bottom: 30px;
+        padding-top: 30px;
 
+        // typography
+        font-size: 1.25rem;
+        font-weight: 400;
+        text-transform: uppercase;
+
+        @include blueUnderline;
+
+        @include atTabletsPortrait {
+            // box model
+            padding-top: 0;
+        }
     }
 }
