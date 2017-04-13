@@ -5,8 +5,8 @@ const sassModuleImporter = require('sass-module-importer');
 gulp.task('styles', function() {
     return gulp.src('./src/sass/**/*.scss')
         .pipe(sass({ importer: sassModuleImporter() }))
-        .on('error', function(erronInfo) {
-            console.log(erronInfo.toString());
+        .on('error', function(errorInfo) {
+            console.log(errorInfo.toString());
             this.emit('end');
         })
         .pipe(gulp.dest('./dist/'));

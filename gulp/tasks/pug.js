@@ -9,4 +9,4 @@ gulp.task('pugRender', function() {
             this.emit('end');
         })
         .pipe(gulp.dest('./dist/'));
-})
+});
