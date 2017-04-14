@@ -7,4 +7,9 @@
     background-image: url('./img/footer-bg-s.jpg');
     background-position: center center;
     background-size: cover;
+
+    @include atDesktop {
+        // box model
+        padding-top: 100px;
+    }
 }

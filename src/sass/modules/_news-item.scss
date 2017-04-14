@@ -2,6 +2,23 @@
     // box model
     padding: 25px;
 
+    // typography
+    font-size: 0;
+
+    @include atTabletsLandscape {
+        // box model
+        width: 31.2%;
+        padding: 0;
+    }
+
+    @include atDesktop {
+        // box model
+        padding: 25px;
+
+        // visual
+        background-color: #ffffff;
+    }
+
     &:hover {
         // visual
         background-color: $lighterBlue;
@@ -14,6 +31,40 @@
         img {
             // box model
             width: 100%;
+        }
+
+        @include atTabletsPortrait {
+            // box model
+            display: inline-block;
+            vertical-align: top;
+            width: 320px;
+            margin-left: 0;
+        }
+
+        @include atTabletsLandscape {
+            // box model
+            display: block;
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+
+    &__text-wrapper {
+        @include atTabletsPortrait {
+            // box model
+            display: inline-block;
+            vertical-align: top;
+            width: calc(100% - 320px);
+            padding-left: 20px;
+            margin-top: -25px;
+        }
+
+        @include atTabletsLandscape {
+            // box model
+            display: block;
+            width: 100%;
+            padding-left: 0;
+            margin-top: 0;
         }
     }
 
@@ -86,6 +137,14 @@
         // typography
         color: $mainCopy;
         font-size: 0.875rem;
+
+        @include atTabletsLandscape {
+            // box model
+            height: 8em;
+            
+            // visual
+            overflow: hidden;
+        }
     }
 
     &__more {

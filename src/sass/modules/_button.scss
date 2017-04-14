@@ -11,4 +11,13 @@
 
     // visual
     border: 2px solid $mainBlue;
+    transition: all 0.3s ease-out;
+
+    &:hover {
+        // typography
+        color: #ffffff;
+
+        // visual
+        background-color: $mainBlue;
+    }
 }

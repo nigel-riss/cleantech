@@ -1,0 +1,15 @@
+.copyrights {
+    // box model
+    padding-top: 80px;
+    
+    // typography
+    color: #ffffff;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &--blue {
+        // typography
+        color: $mainBlue;
+    }
+}

@@ -8,7 +8,7 @@
     // box model
     min-height: 100vh;
     padding: 100px 0;
-    // visibility: hidden;
+    visibility: hidden;
 
     // visual
     background-color: rgba($menuBlue, 0.9);
@@ -24,6 +24,7 @@
         // box model
         padding: 20px;
         min-height: auto;
+        visibility: visible;
 
         // visual
         background-color: rgba($menuBlue, 0.7);
@@ -32,7 +33,7 @@
 
     @include atDesktop {
         // positioning
-        bottom: 80px;
+        bottom: 100px;
     }
 
     ul {

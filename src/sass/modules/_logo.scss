@@ -1,12 +1,24 @@
 .logo {
     // box model
-    height: 103px;
-    width: 204px;
+    height: 152px;
+    width: 306px;
     // border: 1px solid red;
 
     img {
         // box model
         height: 100%;
         width: 100%;
+    }
+
+    @include atTabletsLandscape {
+        // box model
+        height: 104px;
+        width: 204px;
+    }
+
+    @include atDesktop {
+        // box model
+        height: 152px;
+        width: 306px;
     }
 }

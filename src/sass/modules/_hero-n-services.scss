@@ -1,0 +1,19 @@
+.hero-n-services {
+    // positioning
+    position: relative;
+
+    &::after {
+        content: "";
+
+        // box model
+        display: table;
+        width: 100%;
+        clear: both;
+    }
+
+    @include atDesktopLarge {
+        // box model
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+}

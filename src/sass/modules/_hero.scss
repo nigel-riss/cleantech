@@ -16,13 +16,32 @@
         // box model
         width: 800px;
         margin: 0 auto;
+
         margin-top: -40px;
+        margin-bottom: 40px;
         padding: 60px 0;
         padding-right: 100px;
-        margin-bottom: 40px;
 
         // visual
         background-image: url('./img/hero-bg-l.jpg');background-position: right center;
+    }
+
+    @include atDesktop {
+        // box model
+        float: left;
+        width: calc(100% - 760px);
+        height: 800px;
+
+        margin-top: -80px;
+        padding-right: 80px;
+
+        // visual
+        box-shadow: 0 0 20px rgba(#212121, 0.5);
+    }
+
+    @include atDesktopLarge {
+        // box model
+        padding-top: 120px;
     }
 
     &__wrapper {
@@ -34,6 +53,18 @@
         background-color: rgba(#ffffff, 0.85);
 
         @include atTabletsLandscape {
+            // box model
+            padding-right: 40px;
+            padding-left: 100px;
+        }
+
+        @include atDesktop {
+            // box model
+            padding-left: 60px;
+        }
+
+        @include atDesktopLarge {
+            // box model
             padding-left: 100px;
         }
     }
@@ -52,6 +83,9 @@
     }
 
     &__title {
+        // box model
+        margin: 0;
+
         // typography
         color: $mainTitle;
         font-size: 2.25rem;
@@ -60,6 +94,9 @@
     }
 
     &__subtitle {
+        // box model
+        margin: 0;
+
         // typography
         color: $mainBlue;
         font-size: 1.5rem;

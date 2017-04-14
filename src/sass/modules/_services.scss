@@ -1,4 +1,7 @@
 .services {
+    // positioning
+    position: relative;
+
     // box model
     padding: 25px;
     padding-bottom: 40px;
@@ -13,6 +16,18 @@
         // box model
         width: 800px;
         margin: 0 auto;
+    }
+
+    @include atDesktop {
+        // box model
+        float: left;
+        width: 680px;
+        height: 800px;
+        margin-left: 40px;
+        margin-top: -80px;
+
+        // visual
+        box-shadow: 0 0 20px rgba(#212121, 0.5);
     }
 
     &__main {
@@ -33,6 +48,23 @@
             vertical-align: top;
             width: 50%;
             // border: 1px solid red;
+        }
+    }
+
+    &__projects {
+        @include atTabletsPortrait {
+            // positioning
+            position: absolute;
+            bottom: 40px;
+            right: 0;
+            
+            // box model
+            width: 50%;
+        }
+
+        @include atDesktop {
+            // positioning
+            bottom: 235px;
         }
     }
 
@@ -67,5 +99,14 @@
             // box model
             padding-top: 0;
         }
+    }
+
+    &__text {
+        // box model
+        margin: 0;
+        padding-bottom: 30px;
+
+        // typography
+        font-size: 1rem;
     }
 }

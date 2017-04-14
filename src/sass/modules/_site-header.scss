@@ -5,6 +5,7 @@
     // box model
     height: 200px;
     padding: 25px;
+    padding-left: 0;
     
     // visual
     background-color: #c8d6e1;
@@ -15,6 +16,8 @@
     @include atTabletsPortrait {
         // box model
         height: 300px;
+        padding-top: 30px;
+        padding-left: 20px;
 
         // visual
         background-image: url('./img/header-bg-l-1x.jpg');
