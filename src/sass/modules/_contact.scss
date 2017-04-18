@@ -2,24 +2,43 @@
     // box model
     margin-bottom: 10px;
 
+    @include atTabletsPortrait {
+        // box model
+        // display: inline-block;
+    }
+
     &__name {
+        // box model
+        display: inline-block;
+
         // typography
-        color: $mainBlue;
+        color: #ffffff;
         font-size: 1rem;
         font-weight: 700;
     }
 
     &__value {
+        // box model
+        display: inline-block;
+        
         a {
+            // box model
+            display: inline-block;
+            margin-top: 2px;
+            padding: 0 5px;
+
             // typography
-            color: $mainTitle;
+            color: #ffffff;
             font-size: 1rem;
             font-weight: 700;
             text-decoration: none;
 
+            // visual
+            background-color: $mainBlue;
+
             &:hover {
                 // typography
-                color: $mainBlue;
+                color: $mainTitle;
             }
         }
     }

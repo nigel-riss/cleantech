@@ -1,0 +1,42 @@
+doctype html
+
+head
+    meta(charset="UTF-8")
+    meta(name="viewport",
+        content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic")
+    link(rel="stylesheet", href="styles.css")
+
+body
+    header.site-header
+        .search-n-lang
+            .menu-icon: .menu-icon__middle
+            .search
+            .language
+        
+        .logo: img(src="./img/logo.png")
+
+        nav.main-nav: ul
+            - var list = ["О компании", "Новости", "Проекты", "Партнеры", "Сотрудники", "Вакансии", "Контакты"];
+            - for (var i = 0; i < 7; i++)
+                li
+                    a(href="#")=  list[i]
+
+        //- h1.site-header__title О Компании
+
+    .wrapper
+        main.site-main
+            header.site-main__header
+                .site-main__breadcumbs Главная / #[span О Компании]
+                h2.site-main__title Чистые Технологии Балтики
+                p.site-main__text Наша компания занимается в сфере оптовой и розничной торговли оборудования систем энергообеспечения на базе возобновляемых источников энергии (далее ВИЭ),  предоставлением услуг в сфере проектирования, поставки, установки, ввода в эксплуатацию и технического обслуживания энергообъектов  на базе ВИЭ (энергия солнца, ветра, биомасс), а также систем водоочистки, переработки отходов, повышения энергоэффективности разного рода объектов и т.д
+                p.site-main__text #[strong Директор: Андрей Суленко]
+
+        aside.side-nav
+            ul.side-nav__list
+                li.side-nav__item: span Общая информация
+                li.side-nav__item: a(href="#") Наша команда
+                li.side-nav__item: a(href="#") Вакансии
+                li.side-nav__item: a(href="#") Контакты
+
+    include includes/_footer.pug

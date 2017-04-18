@@ -1,0 +1,24 @@
+.side-nav {
+    // box model
+    padding: 25px;
+
+    @include atDesktop {
+        // box model
+        display: inline-block;
+        vertical-align: top;
+        width: 275px;
+        margin: 40px 0;
+        margin-left: 20px;
+
+        // visual
+        background-color: #ffffff;
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+
+        // visual
+        list-style: none;
+    }
+}

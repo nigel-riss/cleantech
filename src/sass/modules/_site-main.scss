@@ -1,0 +1,35 @@
+.site-main {
+    // box model
+    padding: 25px;
+
+    // visual
+    background-color: #ffffff;
+
+    @include atDesktop {
+        // box model
+        display: inline-block;
+        vertical-align: top;
+        margin: 40px 0;
+        width: calc(100% - 300px);
+    }
+
+    &__header {
+
+    }
+
+    &__breadcumbs {
+        // typography
+        text-transform: uppercase;
+
+        span {
+            // typography
+            color: $mainBlue;
+            font-weight: 700;
+        }
+    }
+
+    &__title {
+        // typography
+        text-transform: uppercase;
+    }
+}

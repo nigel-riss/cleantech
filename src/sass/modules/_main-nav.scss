@@ -16,15 +16,21 @@
 
     @include atTabletsLandscape {
         // positioning
-        bottom: 60px;
+        bottom: 70px;
+        // bottom: 100px;
         right: 0;
         top: auto;
         left: auto;
 
         // box model
-        padding: 20px;
+        padding: 10px 20px;
+        // padding-right: 60px;
+        width: 100%;
         min-height: auto;
         visibility: visible;
+
+        // typography
+        text-align: right;
 
         // visual
         background-color: rgba($menuBlue, 0.7);
@@ -33,7 +39,32 @@
 
     @include atDesktop {
         // positioning
-        bottom: 100px;
+        bottom: 110px;
+
+        @media(min-width: 1700px) {
+            padding-right: calc((100% - 1700px) / 2 - 15px);
+        }
+        
+        // box model
+        padding: 20px;
+        width: auto;
+
+        &::before {
+            content: "";
+
+            // positioning
+            position: absolute;
+            top: 0;
+            left: -80px;
+
+            // box model
+            height: 100%;
+            width: 80px;
+            // border: 1px solid red;
+
+            // visual
+            background-image: linear-gradient(60deg, transparent 0%,transparent 40%, rgba($mainBlue, 0.5) 40%, rgba($mainBlue, 0.5) 60%, rgba($menuBlue, 0.7) 60%, rgba($menuBlue, 0.7) 100%);
+        }
     }
 
     ul {
@@ -76,6 +107,10 @@
             // typography
             font-size: 1rem;
             text-transform: none;
+        }
+
+        @include atDesktop {
+            // box model
         }
 
         &:hover {

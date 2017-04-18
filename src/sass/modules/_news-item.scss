@@ -17,6 +17,7 @@
 
         // visual
         background-color: #ffffff;
+        box-shadow: 0 0 7px 0 rgba(#212121, 0.2);
     }
 
     &:hover {
@@ -73,7 +74,7 @@
         position: relative;
 
         // box model
-        margin-bottom: 5px;
+        margin-bottom: 10px;
         padding-top: 25px;
         overflow: hidden;
         height: 85px;
@@ -119,7 +120,7 @@
         // typography
         color: $mainTitle;
         font-size: 1rem;
-        font-weight: 400;
+        font-weight: 700;
         text-transform: uppercase;
         // white-space: nowrap;
     }
@@ -136,7 +137,8 @@
 
         // typography
         color: $mainCopy;
-        font-size: 0.875rem;
+        line-height: 1.5;
+        font-size: 1rem;
 
         @include atTabletsLandscape {
             // box model

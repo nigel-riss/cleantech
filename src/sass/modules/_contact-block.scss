@@ -1,10 +1,17 @@
 .contact-block {
+    @include atTabletsPortrait {
+        // box model
+        float: left;
+        width: 50%;
+        // border: 1px solid red;
+    }
+
     &__title {
         // positioning
         position: relative;
 
         // typography
-        color: $mainTitle;
+        color: #ffffff;
         font-size: 1.25rem;
         font-weight: 700;
         text-transform: uppercase;

@@ -29,8 +29,8 @@
     @include atDesktop {
         // box model
         float: left;
-        width: calc(100% - 760px);
-        height: 800px;
+        width: calc(100% - 640px);
+        height: 700px;
 
         margin-top: -80px;
         padding-right: 80px;
@@ -41,7 +41,8 @@
 
     @include atDesktopLarge {
         // box model
-        padding-top: 120px;
+        padding-right: 8vw;
+        padding-top: calc(100px + 2vw);
     }
 
     &__wrapper {
@@ -50,21 +51,23 @@
         padding-bottom: 40px;
 
         // visual
-        background-color: rgba(#ffffff, 0.85);
+        background-color: rgba(#ffffff, 0.95);
 
         @include atTabletsLandscape {
             // box model
-            padding-right: 40px;
+            padding-right: 80px;
             padding-left: 100px;
         }
 
         @include atDesktop {
             // box model
             padding-left: 60px;
+            padding-right: 60px;
         }
 
         @include atDesktopLarge {
             // box model
+            padding-right: 15%;
             padding-left: 100px;
         }
     }
@@ -85,6 +88,7 @@
     &__title {
         // box model
         margin: 0;
+        width: 70%;
 
         // typography
         color: $mainTitle;
@@ -109,5 +113,7 @@
         
         // typography
         color: $mainCopy;
+        font-size: 1rem;
+        line-height: 1.5;
     }
 }

@@ -9,7 +9,16 @@
     text-transform: uppercase;
 
     &--blue {
-        // typography
-        color: $mainBlue;
+        // box model
+        display: inline-block;
+        padding: 0 5px;
+
+        // visual
+        background-color: $mainBlue;
+    }
+
+    @include atTabletsPortrait {
+        // box model
+        float: right;
     }
 }

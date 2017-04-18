@@ -4,17 +4,18 @@ head
     meta(charset="UTF-8")
     meta(name="viewport",
         content="width=device-width, initial-scale=1")
-    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,700&amp;subset=cyrillic")
     link(rel="stylesheet", href="styles.css")
 
 body
     header.site-header
-        .search-n-lang
-            .menu-icon: .menu-icon__middle
-            .search
-            .language
+        .site-header__wrapper
+            .search-n-lang
+                .menu-icon: .menu-icon__middle
+                .search
+                .language
 
-        .logo: img(src="./img/logo.png")
+            .logo: img(src="./img/logo.png")
 
         nav.main-nav: ul
             - var list = ["О компании", "Новости", "Услуги", "Проекты", "Партнеры", "Вакансии", "Отзывы", "Контакты"];
@@ -26,8 +27,8 @@ body
         section.hero
             .hero__wrapper
                 p.hero__welcome Добро пожаловать
-                h1.hero__title Baltic Clean Technologies
-                p.hero__subtitle Clean Solutions for Your Life
+                h1.hero__title Чистые Технологии Балтики
+                p.hero__subtitle Чистые Технологии для жизни
                 p.hero__text
                     | Наша организация занимается работой в сфере оптовой и разничной торговли оборудования систем энергообеспечения на базе возобновляемых источников энергии, а также систем водоочистки и переработки отходов
                 a(href='about.html').button О компании
@@ -45,7 +46,7 @@ body
                 +service-item("Поставка оборудования", "Поставка оборудования для проектов ВИЭ", "./img/icons/delivery.png")
                 +service-item("Монтаж оборудования", "Монтаж оборудования и пуско-наладочные работы", "./img/icons/mount.png")
 
-                a(href="#").button Все услуги
+                a(href="#").button.button--mt-40 Все услуги
 
             .services__dir
                 p.services__subtitle По направлениям
@@ -56,7 +57,7 @@ body
                 +service-item-dir("Переработка отходов", "./img/icons/recycle.png")
                 +service-item-dir("Возобновляемые источники энергии", "./img/icons/solar.png")
                 +service-item-dir("Водоочистка", "./img/icons/water.png")
-                +service-item-dir("Повышение энергоэффективности", "./img/icons/energy.png")
+                +service-item-dir("Повышение энерго-эффективности", "./img/icons/energy.png")
 
             .services__projects
                 p.services__subtitle Наши проекты
@@ -85,19 +86,4 @@ body
             +news-item("./img/news/photo-2.jpg", "10", "ферваля", "2017", "Микропластик в Балтике", "Шведское агентство по химическим веществам (KEMI) проведет в 2017 году исследование о расширении списка запрещенных косметических продуктов")
             +news-item("./img/news/photo-3.jpg", "12", "февраля", "2017", "Новый проект фонда НЕФКО", "НЕФКО - Северная экологическая финансовая корпорация, подписала договор об инвестициях в свой первый сельскохозяйственный проект")
 
-    footer.site-footer
-        .contact-block
-            h3.contact-block__title Контакты
-
-            .contact
-                .contact__name Телефон:
-                .contact__value: a(href="tel:+79114571223") +7 911 457-12-23
-
-            .contact
-                .contact__name Email:
-                .contact__value: a(href="mailto: somemail@gmail.com") somemail@gmail.com
-
-        //- .contact-block
-        //-     h3.contact-block__title Мы в соцсетях
-
-        .copyrights &copy;  #[span.copyrights--blue Чистые Технологии] 2017. 
+    include includes/_footer.pug

@@ -13,6 +13,16 @@
     border: 2px solid $mainBlue;
     transition: all 0.3s ease-out;
 
+    &--mt-40 {
+        // box model
+        display: block;
+        margin-top: 39px;
+        margin-right: 45%;
+
+        // typography
+        text-align: center;
+    }
+
     &:hover {
         // typography
         color: #ffffff;
