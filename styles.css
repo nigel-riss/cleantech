@@ -335,7 +335,9 @@ body {
   .service-item-dir__icon {
     position: absolute;
     height: 55px;
-    width: 55px; }
+    width: 55px;
+    background-color: #00baff;
+    border-radius: 50%; }
     .service-item-dir__icon img {
       height: 100%;
       width: 100%; }
@@ -369,7 +371,7 @@ body {
 .site-footer {
   position: relative;
   padding: 25px;
-  padding-top: 200px;
+  padding-top: 100px;
   background-color: #e7edf5;
   background-image: url("./img/footer-bg-s.jpg");
   background-position: center bottom;
@@ -380,12 +382,22 @@ body {
       background-image: url("./img/footer-bg-l.jpg"); } }
   @media (min-width: 1200px) {
     .site-footer {
-      padding-top: 200px; } }
+      padding-top: 150px; } }
   .site-footer::after {
     content: "";
     display: table;
     width: 100%;
     clear: both; }
+  @media (min-width: 1200px) {
+    .site-footer__wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 50px; }
+      .site-footer__wrapper::after {
+        content: "";
+        display: table;
+        width: 100%;
+        clear: both; } }
 
 .news-item {
   padding: 25px;
@@ -505,7 +517,7 @@ body {
   margin-bottom: 10px; }
   .contact__name {
     display: inline-block;
-    color: #ffffff;
+    color: #00baff;
     font-size: 1rem;
     font-weight: 700; }
   .contact__value {
@@ -517,10 +529,9 @@ body {
       color: #ffffff;
       font-size: 1rem;
       font-weight: 700;
-      text-decoration: none;
-      background-color: #00baff; }
+      text-decoration: none; }
       .contact__value a:hover {
-        color: #333333; }
+        background-color: #00baff; }
 
 .news {
   padding: 25px 0; }
@@ -530,7 +541,7 @@ body {
       top: -120px;
       z-index: 2;
       margin: 0 auto;
-      margin-bottom: -350px;
+      margin-bottom: -280px;
       max-width: 1200px; } }
   @media (min-width: 900px) {
     .news__header {
@@ -561,16 +572,18 @@ body {
 .copyrights {
   padding-top: 80px;
   color: #ffffff;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 700;
+  text-align: right;
   text-transform: uppercase; }
   .copyrights--blue {
     display: inline-block;
     padding: 0 5px;
-    background-color: #00baff; }
+    color: #00baff; }
   @media (min-width: 700px) {
     .copyrights {
-      float: right; } }
+      float: right;
+      padding-top: 100px; } }
 
 .site-main {
   padding: 25px;
