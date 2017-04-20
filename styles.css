@@ -96,7 +96,7 @@ body {
         left: -80px;
         height: 100%;
         width: 80px;
-        background-image: linear-gradient(60deg, transparent 0%, transparent 40%, rgba(0, 186, 255, 0.5) 40%, rgba(0, 186, 255, 0.5) 60%, rgba(0, 38, 53, 0.7) 60%, rgba(0, 38, 53, 0.7) 100%); } }
+        background-image: linear-gradient(73deg, transparent 0%, transparent 40%, rgba(0, 186, 255, 0.5) 40%, rgba(0, 186, 255, 0.5) 60%, rgba(0, 38, 53, 0.7) 60%, rgba(0, 38, 53, 0.7) 100%); } }
   .main-nav ul {
     margin: 0;
     padding: 0;
@@ -219,7 +219,7 @@ body {
   padding: 25px;
   padding-bottom: 40px;
   font-size: 0;
-  background-image: linear-gradient(87deg, #d0ebf5 0, #d0ebf5 65%, #f6f6f6 65.25%, #f6f6f6 100%); }
+  background-image: linear-gradient(73deg, #d0ebf5 0, #d0ebf5 53%, #f6f6f6 53.25%, #f6f6f6 100%); }
   @media (min-width: 900px) {
     .services {
       width: 800px;
