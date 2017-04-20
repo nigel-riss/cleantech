@@ -116,6 +116,15 @@
         &:hover {
             // visual
             background-color: $mainBlue;
+            transition: all 0.3s ease-out;
+
+            @include atTabletsLandscape {
+                // typography
+                color: $mainBlue;
+
+                // visual
+                background-color: transparent;
+            }
         }
     }
 }
