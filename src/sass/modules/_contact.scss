@@ -12,7 +12,7 @@
         display: inline-block;
 
         // typography
-        color: #ffffff;
+        color: $mainBlue;
         font-size: 1rem;
         font-weight: 700;
     }
@@ -33,12 +33,13 @@
             font-weight: 700;
             text-decoration: none;
 
-            // visual
-            background-color: $mainBlue;
 
             &:hover {
                 // typography
-                color: $mainTitle;
+                // color: $mainTitle;
+                
+                // visual
+                background-color: $mainBlue;
             }
         }
     }

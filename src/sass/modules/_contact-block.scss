@@ -1,9 +1,9 @@
 .contact-block {
+    // border: 1px solid red;
     @include atTabletsPortrait {
         // box model
         float: left;
         width: 50%;
-        // border: 1px solid red;
     }
 
     &__title {
