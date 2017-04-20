@@ -335,8 +335,11 @@ body {
 .service-item-dir {
   position: relative;
   display: table;
+  height: 55px;
   min-height: 55px;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  clear: both;
+  width: 100%; }
   .service-item-dir__icon {
     position: absolute;
     height: 55px;
