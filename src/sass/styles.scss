@@ -1,7 +1,7 @@
 @import "base/wordpress";
 
 // base
-// @import "normalize.css";
+@import "normalize.css";
 @import "base/vars";
 @import "base/mixins";
 @import "base/global";
@@ -29,3 +29,5 @@
 @import "modules/site-main";
 @import "modules/wrapper";
 @import "modules/side-nav";
+@import "modules/about";
+@import "modules/serv-buttons";

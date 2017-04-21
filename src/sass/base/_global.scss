@@ -5,14 +5,19 @@
 }
 
 html {
+    // positioning
+    position: relative;
+    // box model
+    min-height: 100%;
     // typography
     font-size: $baseFontSize;
 }
 
 body {
     // box model
-    margin: 0;
+    margin: 0 0 390px;
     padding: 0;
+    height: 100%;
 
     // typography
     font-family: $mainFont;
@@ -20,4 +25,9 @@ body {
 
     // visual
     background-color: #ffffff;
+
+    @include atTabletsPortrait {
+        // box model
+        margin: 0 0 300px;
+    }
 }

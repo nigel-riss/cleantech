@@ -1,0 +1,58 @@
+.about {
+    @include atDesktop {
+        // box model
+        padding: 40px;
+        min-height: 520px;
+    }
+
+    @include atDesktopLarge {
+        // box model
+        padding-left: 100px;
+
+        // visual
+        background-image: url('./img/about-bg.jpg');
+        background-repeat: no-repeat;
+        // background-size: 100%;
+        background-position: left top;
+    }
+
+    &__wrapper {
+        // box model
+        padding: 25px;
+        
+        // visual
+        background-color: rgba(#ffffff, 0.9);
+
+        @include atTabletsPortrait {
+            // box model
+            padding: 25px 40px;
+            margin-right: 40px;
+        }
+
+        @include atDesktop {
+            // box model
+            margin-right: 0;
+        }
+    }
+
+    &__title {
+        // positioning
+        position: relative;
+
+        // typography
+        text-transform: uppercase;
+    }
+
+    &__text {
+        // typography
+        line-height: 1.5;
+    }
+
+    &__signature {
+        // box model
+        padding-top: 20px;
+
+        // typography
+        text-align: right;
+    }
+}

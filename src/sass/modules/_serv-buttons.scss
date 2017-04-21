@@ -1,0 +1,15 @@
+.serv-buttons {
+    // positioning
+    position: absolute;
+    right: 0;
+    top: 45px;
+
+    // box model
+    display: none;
+
+    @include atDesktop {
+        // box model
+        float: right;
+        display: block;
+    }
+}

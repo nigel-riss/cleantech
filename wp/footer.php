@@ -14,4 +14,8 @@
       <div class="copyrights">&copy;  <span class="copyrights--blue">Чистые Технологии</span> 2017. </div>
     </div>
   </footer>
+
+
+  <?php wp_footer(); ?>
 </body>
+</html>

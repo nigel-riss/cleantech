@@ -1,5 +1,6 @@
 .side-nav {
     // box model
+    display: none;
     padding: 25px;
 
     @include atDesktop {
@@ -7,18 +8,61 @@
         display: inline-block;
         vertical-align: top;
         width: 275px;
+        min-height: 600px;
+
+
         margin: 40px 0;
         margin-left: 20px;
+        margin-top: 109px;
 
         // visual
         background-color: #ffffff;
+        box-shadow: 0 0 20px rgba(#212121, 0.25);
     }
 
-    &__list {
+    &__title {
+        // box model
+        margin: 0;
+        padding: 0;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+
+        // typography
+        font-weight: 400;
+        text-transform: uppercase;
+
+        // visual
+        border-bottom: 1px solid $mainBlue;
+    }
+
+    &__menu {
         margin: 0;
         padding: 0;
 
         // visual
         list-style: none;
+    }
+
+    li {
+        
+    }
+
+    a {
+        // box model
+        display: block;
+        padding: 5px 0;
+
+        // typography
+        color: $mainCopy;
+        text-decoration: none;
+
+        // visual
+        transition: all 0.1s ease-out;
+
+        &:hover {
+            // box model
+            // typography
+            color: $mainBlue;
+        }
     }
 }

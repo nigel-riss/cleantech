@@ -23,11 +23,26 @@
         text-align: center;
     }
 
+    &--ml-30 {
+        // box model
+        margin-left: 30px;
+    }
+
     &:hover {
         // typography
         color: #ffffff;
 
         // visual
         background-color: $mainBlue;
+    }
+
+    &--sand {
+        // visual
+        border-color: $mainSand;
+
+        &:hover {
+            // visual
+            background-color: $mainSand;
+        }
     }
 }
