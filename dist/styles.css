@@ -24,7 +24,7 @@ body {
   padding: 25px;
   background-color: #c8d6e1;
   background-image: url("./img/header-bg-s-2x.jpg");
-  background-position: left center;
+  background-position: right center;
   background-size: cover; }
   @media (min-width: 700px) {
     .site-header {
@@ -97,7 +97,7 @@ body {
         height: 100%;
         width: 80px;
         background-image: linear-gradient(73deg, transparent 0%, transparent 40%, rgba(0, 186, 255, 0.5) 40%, rgba(0, 186, 255, 0.5) 60%, rgba(0, 38, 53, 0.7) 60%, rgba(0, 38, 53, 0.7) 100%); } }
-  .main-nav ul {
+  .main-nav__menu {
     margin: 0;
     padding: 0;
     list-style: none; }

@@ -21,7 +21,14 @@
   $service_desc_4   = get_field('service-desc-4');
 
   // direction 1
-  $dir_1            = get_field('')
+  $dir_1            = get_field('dir-1');
+  $dir_icon_1       = get_field('dir-icon-1');
+  $dir_2            = get_field('dir-2');
+  $dir_icon_2       = get_field('dir-icon-2');
+  $dir_3            = get_field('dir-3');
+  $dir_icon_3       = get_field('dir-icon-3');
+  $dir_4            = get_field('dir-4');
+  $dir_icon_4       = get_field('dir-icon-4');
   
   get_header();
 ?>
@@ -99,22 +106,43 @@
 
       <div class="services__dir">
         <p class="services__subtitle">По направлениям</p>
+
         <article class="service-item-dir">
-          <div class="service-item-dir__icon"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/icons/recycle.png" alt="Переработка отходов"></div>
-          <h3 class="service-item-dir__title">Переработка отходов</h3>
+          <div class="service-item-dir__icon">
+            <img src=<?php echo($dir_icon_1); ?> alt=<?php echo($dir_1); ?>>
+          </div>
+          <h3 class="service-item-dir__title">
+            <?php echo($dir_1); ?>
+          </h3>
         </article>
+
         <article class="service-item-dir">
-          <div class="service-item-dir__icon"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/icons/solar.png" alt="Возобновляемые источники энергии"></div>
-          <h3 class="service-item-dir__title">Возобновляемые источники энергии</h3>
+          <div class="service-item-dir__icon">
+            <img src=<?php echo($dir_icon_2); ?> alt=<?php echo($dir_2); ?>>
+          </div>
+          <h3 class="service-item-dir__title">
+            <?php echo($dir_2); ?>
+          </h3>
         </article>
+
         <article class="service-item-dir">
-          <div class="service-item-dir__icon"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/icons/water.png" alt="Водоочистка"></div>
-          <h3 class="service-item-dir__title">Водоочистка</h3>
+          <div class="service-item-dir__icon">
+            <img src=<?php echo($dir_icon_3); ?> alt=<?php echo($dir_3); ?>>
+          </div>
+          <h3 class="service-item-dir__title">
+            <?php echo($dir_3); ?>
+          </h3>
         </article>
+
         <article class="service-item-dir">
-          <div class="service-item-dir__icon"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/icons/energy.png" alt="Повышение энерго-эффективности"></div>
-          <h3 class="service-item-dir__title">Повышение энерго-эффективности</h3>
+          <div class="service-item-dir__icon">
+            <img src=<?php echo($dir_icon_4); ?> alt=<?php echo($dir_4); ?>>
+          </div>
+          <h3 class="service-item-dir__title">
+            <?php echo($dir_4); ?>
+          </h3>
         </article>
+
       </div>
       <div class="services__projects">
         <p class="services__subtitle">Наши проекты</p>
