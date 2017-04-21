@@ -5,7 +5,7 @@
 
     get_header();
 ?>
-    <main>
+    <main style="color: red; font-size: 3rem; text-align: center;">
         Страница находится в разработке
     </main>
 <?php

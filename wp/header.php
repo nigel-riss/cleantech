@@ -10,6 +10,8 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,700&amp;amp;subset=cyrillic">
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
+
+    <?php wp_head(); ?>
 </head>
 
 <body>

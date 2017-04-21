@@ -15,7 +15,7 @@
 
     @include atTabletsPortrait {
         // box model
-        height: 300px;
+        height: 260px;
         padding-top: 30px;
         padding-left: 20px;
 
@@ -25,8 +25,26 @@
 
     @include atTabletsLandscape {
         // box model
-        padding-top: 40px;
+        padding-top: 60px;
         padding-left: 30px;
+    }
+
+    @include atDesktop {
+        // visual
+        // background-size: 100%;
+        // background-attachment: fixed;
+    }
+
+    &--main {
+        @include atTabletsPortrait {
+            // box model
+            height: 300px;
+        }
+
+        @include atTabletsLandscape {
+            // box model
+            // padding-top: 40px;
+        }
     }
 
     &__wrapper {

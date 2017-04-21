@@ -1,89 +1,90 @@
 doctype html
 
-head
-    meta(charset="UTF-8")
-    meta(name="viewport",
-        content="width=device-width, initial-scale=1")
-    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,700&amp;subset=cyrillic")
-    link(rel="stylesheet", href="styles.css")
+html
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport",
+            content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,700&amp;subset=cyrillic")
+        link(rel="stylesheet", href="styles.css")
 
-body
-    header.site-header
-        .site-header__wrapper
-            .search-n-lang
-                .menu-icon: .menu-icon__middle
-                .search
-                .language
+    body
+        header.site-header.site-header--main
+            .site-header__wrapper
+                .search-n-lang
+                    .menu-icon: .menu-icon__middle
+                    .search
+                    .language
 
-            .logo: img(src="./img/logo.png")
+                .logo: img(src="./img/logo.png")
 
-        nav.main-nav: ul.main-nav__menu
-            - var list = ["О компании", "Новости", "Услуги", "Проекты", "Партнеры", "Вакансии", "Отзывы", "Контакты"];
-            - for (var i = 0; i < 8; i++)
-                li
-                    a(href="#")= list[i]
+            nav.main-nav.main-nav--main: ul.main-nav__menu
+                - var list = ["О компании", "Новости", "Услуги", "Проекты", "Партнеры", "Вакансии", "Отзывы", "Контакты"];
+                - for (var i = 0; i < 8; i++)
+                    li
+                        a(href="#")= list[i]
+            
+        .hero-n-services
+            section.hero
+                .hero__wrapper
+                    p.hero__welcome Добро пожаловать
+                    h1.hero__title Чистые Технологии Балтики
+                    p.hero__subtitle Чистые Технологии для жизни
+                    p.hero__text
+                        | Наша организация занимается работой в сфере оптовой и разничной торговли оборудования систем энергообеспечения на базе возобновляемых источников энергии, а также систем водоочистки и переработки отходов
+                    a(href='about.html').button О компании
         
-    .hero-n-services
-        section.hero
-            .hero__wrapper
-                p.hero__welcome Добро пожаловать
-                h1.hero__title Чистые Технологии Балтики
-                p.hero__subtitle Чистые Технологии для жизни
-                p.hero__text
-                    | Наша организация занимается работой в сфере оптовой и разничной торговли оборудования систем энергообеспечения на базе возобновляемых источников энергии, а также систем водоочистки и переработки отходов
-                a(href='about.html').button О компании
-    
-        section.services
-            .services__main
-                h2.services__title Наши услуги
-                mixin service-item(title, text, iconUrl)
-                    article.service-item
-                        .service-item__icon: img(src=iconUrl, alt=title)
-                        h3.service-item__title= title
-                        p.service-item__text= text
-                +service-item("Проектирование", "Проектирование и консалтинг проектов ВИЭ", "./img/icons/project.png")
-                +service-item("Обслуживание", "Обслужинвание объектов ВИЭ, услуги ОЕМ", "./img/icons/service.png")
-                +service-item("Поставка оборудования", "Поставка оборудования для проектов ВИЭ", "./img/icons/delivery.png")
-                +service-item("Монтаж оборудования", "Монтаж оборудования и пуско-наладочные работы", "./img/icons/mount.png")
+            section.services
+                .services__main
+                    h2.services__title Наши услуги
+                    mixin service-item(title, text, iconUrl)
+                        article.service-item
+                            .service-item__icon: img(src=iconUrl, alt=title)
+                            h3.service-item__title= title
+                            p.service-item__text= text
+                    +service-item("Проектирование", "Проектирование и консалтинг проектов ВИЭ", "./img/icons/project.png")
+                    +service-item("Обслуживание", "Обслужинвание объектов ВИЭ, услуги ОЕМ", "./img/icons/service.png")
+                    +service-item("Поставка оборудования", "Поставка оборудования для проектов ВИЭ", "./img/icons/delivery.png")
+                    +service-item("Монтаж оборудования", "Монтаж оборудования и пуско-наладочные работы", "./img/icons/mount.png")
 
-                a(href="#").button.button--mt-40 Все услуги
+                    a(href="#").button.button--mt-40 Все услуги
 
-            .services__dir
-                p.services__subtitle По направлениям
-                mixin service-item-dir(title, iconUrl)
-                    article.service-item-dir
-                        .service-item-dir__icon: img(src=iconUrl, alt=title)
-                        h3.service-item-dir__title= title
-                +service-item-dir("Переработка отходов", "./img/icons/recycle.png")
-                +service-item-dir("Возобновляемые источники энергии", "./img/icons/solar.png")
-                +service-item-dir("Водоочистка", "./img/icons/water.png")
-                +service-item-dir("Повышение энерго-эффективности", "./img/icons/energy.png")
+                .services__dir
+                    p.services__subtitle По направлениям
+                    mixin service-item-dir(title, iconUrl)
+                        article.service-item-dir
+                            .service-item-dir__icon: img(src=iconUrl, alt=title)
+                            h3.service-item-dir__title= title
+                    +service-item-dir("Переработка отходов", "./img/icons/recycle.png")
+                    +service-item-dir("Возобновляемые источники энергии", "./img/icons/solar.png")
+                    +service-item-dir("Водоочистка", "./img/icons/water.png")
+                    +service-item-dir("Повышение энерго-эффективности", "./img/icons/energy.png")
 
-            .services__projects
-                p.services__subtitle Наши проекты
-                p.services__text Перечень текущих и реализованных проектов нашей компанией
-                a(href="#").button.button--sand Наши проекты
+                .services__projects
+                    p.services__subtitle Наши проекты
+                    p.services__text Перечень текущих и реализованных проектов нашей компанией
+                    a(href="#").button.button--sand Наши проекты
 
-    
-    section.news
-        mixin news-item(imgUrl, day, month, year, title, text)
-            article.news-item
-                .news-item__image: img(src=imgUrl)
-                .news-item__text-wrapper
-                    header.news-item__header
-                        .news-item__day= day
-                        .news-item__date= month + ", " + year
-                        h3.news-item__title= title
-                    .news-item__content
-                        .news-item__text= text
-                        a(href="#").news-item__more Читать дальше...
+        
+        section.news
+            mixin news-item(imgUrl, day, month, year, title, text)
+                article.news-item
+                    .news-item__image: img(src=imgUrl)
+                    .news-item__text-wrapper
+                        header.news-item__header
+                            .news-item__day= day
+                            .news-item__date= month + ", " + year
+                            h3.news-item__title= title
+                        .news-item__content
+                            .news-item__text= text
+                            a(href="#").news-item__more Читать дальше...
 
-        header.news__header
-            h2.news__title Новости
+            header.news__header
+                h2.news__title Новости
 
-        .news__wrapper
-            +news-item("./img/news/photo-1.jpg", "07", "февраля", "2017", "Скандал с выбросами VW", "К таким выводам пришли члены Европейского парламента, обсуждавшие результаты надавнего скандала с концерном Фольксваген")
-            +news-item("./img/news/photo-2.jpg", "10", "ферваля", "2017", "Микропластик в Балтике", "Шведское агентство по химическим веществам (KEMI) проведет в 2017 году исследование о расширении списка запрещенных косметических продуктов")
-            +news-item("./img/news/photo-3.jpg", "12", "февраля", "2017", "Новый проект фонда НЕФКО", "НЕФКО - Северная экологическая финансовая корпорация, подписала договор об инвестициях в свой первый сельскохозяйственный проект")
+            .news__wrapper
+                +news-item("./img/news/photo-1.jpg", "07", "февраля", "2017", "Скандал с выбросами VW", "К таким выводам пришли члены Европейского парламента, обсуждавшие результаты надавнего скандала с концерном Фольксваген")
+                +news-item("./img/news/photo-2.jpg", "10", "ферваля", "2017", "Микропластик в Балтике", "Шведское агентство по химическим веществам (KEMI) проведет в 2017 году исследование о расширении списка запрещенных косметических продуктов")
+                +news-item("./img/news/photo-3.jpg", "12", "февраля", "2017", "Новый проект фонда НЕФКО", "НЕФКО - Северная экологическая финансовая корпорация, подписала договор об инвестициях в свой первый сельскохозяйственный проект")
 
-    include includes/_footer.pug 
+        include includes/_footer.pug 
