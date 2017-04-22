@@ -5,5 +5,11 @@
     @include atDesktop {
         // box model
         margin: 0 100px;
+        margin-top: -240px;
+        
+        // visual
+        // background-color: #ffffff;
+        padding: 0 40px;
+                // box-shadow: 0 0 20px rgba(#212121, 0.25);
     }
 }

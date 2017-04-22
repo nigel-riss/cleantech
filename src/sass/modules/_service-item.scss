@@ -19,6 +19,7 @@
 
         // visual
         background-color: $mainBlue;
+        // background-color: $mainSand;
         border-radius: 10px;
 
         img {
@@ -37,8 +38,11 @@
 
         // typography
         color: $mainTitle;
+        color: $mainBlue;
+        // color: $mainSand;
         font-size: 1rem;
         font-weight: 700;
+        line-height: 1.4;
         text-transform: uppercase;
     }
 
@@ -53,6 +57,6 @@
         color: $mainCopy;
         font-size: 0.875rem;
         font-weight: 400;
-        line-height: 1.4;
+        line-height: 1.5;
     }
 }

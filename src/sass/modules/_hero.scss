@@ -7,6 +7,7 @@
     background-image: url('./img/hero-bg-s.jpg');
     background-size: cover;
     background-position: right center;
+    background-repeat: no-repeat;
 
     @include atTabletsLandscape {
         // positioning
@@ -14,11 +15,8 @@
         z-index: 2;
 
         // box model
-        width: 800px;
         margin: 0 auto;
 
-        margin-top: -40px;
-        margin-bottom: 40px;
         padding: 60px 0;
         padding-right: 100px;
 
@@ -32,17 +30,22 @@
         width: calc(100% - 640px);
         height: 700px;
 
-        margin-top: -60px;
-        padding-right: 80px;
+        padding-right: 0px;
 
         // visual
         box-shadow: 0 0 20px rgba(#212121, 0.5);
     }
 
+    @media (min-width: 1300px) {
+        // box model
+        padding-right: 60px;
+    }
+
     @include atDesktopLarge {
         // box model
         padding-right: 8vw;
-        padding-top: calc(100px + 2vw);
+        padding-top: calc(30px + 3vw);
+        padding-top: 5vw;
     }
 
     &__wrapper {
@@ -51,7 +54,7 @@
         padding-bottom: 40px;
 
         // visual
-        background-color: rgba(#ffffff, 0.95);
+        background-color: rgba(#ffffff, 0.90);
 
         @include atTabletsLandscape {
             // box model
@@ -67,6 +70,7 @@
 
         @include atDesktopLarge {
             // box model
+            padding: 3vw;
             padding-right: 15%;
             padding-left: 100px;
         }
@@ -89,11 +93,13 @@
         // box model
         margin: 0;
         width: 70%;
+        padding: 10px 0;
 
         // typography
         color: $mainTitle;
         font-size: 2.25rem;
         font-weight: 400;
+        line-height: 1.2;
         text-transform: uppercase;
     }
 
@@ -104,6 +110,7 @@
         // typography
         color: $mainBlue;
         font-size: 1.5rem;
+        line-height: 1.4;
         text-transform: uppercase;
     }
 

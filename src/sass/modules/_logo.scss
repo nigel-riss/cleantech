@@ -1,8 +1,11 @@
 .logo {
+    // positioning
+    position: relative;
+    z-index: 3;
+
     // box model
     height: 92px;
     width: 196px;
-    // border: 1px solid red;
 
     img {
         // box model
@@ -16,7 +19,7 @@
         width: 196px;
     }
 
-    @include atDesktopLarge {
+    @include atDesktop {
         // box model
         height: 131px;
         width: 280px;

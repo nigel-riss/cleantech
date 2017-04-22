@@ -11,10 +11,11 @@
 
     // visual
     background-image: linear-gradient(73deg, $lightBlue 0, $lightBlue 53%, #f6f6f6 53.25%, #f6f6f6 100%);
+    background-image: linear-gradient(73deg, #ffffff 0, #ffffff 53%, $lightBlue 53.25%, $lightBlue 100%);
 
     @include atTabletsLandscape {
         // box model
-        width: 800px;
+        // width: 800px;
         padding: 25px 40px;
         padding-bottom: 50px;
         margin: 0 auto;
@@ -26,7 +27,6 @@
         width: 600px;
         height: 700px;
         margin-left: 40px;
-        margin-top: -60px;
 
         // visual
         box-shadow: 0 0 20px rgba(#212121, 0.5);
@@ -39,7 +39,6 @@
             vertical-align: top;
             width: 60%;
             padding-right: 20px;
-            // border: 1px solid red;
         }
     }
 
@@ -49,7 +48,6 @@
             display: inline-block;
             vertical-align: top;
             width: 40%;
-            // border: 1px solid red;
         }
     }
 
@@ -106,9 +104,11 @@
     &__text {
         // box model
         margin: 0;
-        padding-bottom: 30px;
+        padding-bottom: 40px;
 
         // typography
+        color: $mainCopy;
         font-size: 1rem;
+        line-height: 1.4;
     }
 }

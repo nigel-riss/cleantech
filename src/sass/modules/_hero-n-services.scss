@@ -11,9 +11,15 @@
         clear: both;
     }
 
+    @include atDesktop {
+        // box model
+        margin-top: -240px;
+    }
+
     @include atDesktopLarge {
         // box model
         max-width: 1700px;
         margin: 0 auto;
+        margin-top: -240px;
     }
 }

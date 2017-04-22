@@ -5,13 +5,22 @@
     @include atDesktop {
         // positioning
         position: relative;
-        top: -120px;
+        top: -50px;
         z-index: 2;
 
         // box model
         margin: 0 auto;
-        margin-bottom: -280px;
+        margin-bottom: -200px;
         max-width: 1200px;
+    }
+
+    @include atDesktopLarge {
+        // positioning
+        top: -80px;
+
+        // box model
+        margin-bottom: -240px;
+        max-width: 1400px;
     }
 
     &__header {
@@ -44,7 +53,6 @@
             // box model
             display: flex;
             justify-content: space-between;
-            // width: 900;
             margin: 0 50px;
         }
     }
