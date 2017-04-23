@@ -1,0 +1,78 @@
+.header-contact {
+    // box model
+    display: block;
+
+    margin-right: 40px;
+    margin-bottom: 15px;
+
+    @include atDesktop {
+        // box model
+        display: inline-block;
+        vertical-align: top;
+        margin-bottom: 0;
+    }
+
+    &__title {
+        // box model
+        margin-bottom: 5px;
+
+        // typography
+        color: #ffffff;
+        font-size: 1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+
+        @include atDesktop {
+            // box model
+            margin-bottom: 15px;
+
+            // typography
+            font-size: 1.25rem;
+        }
+    }
+
+    a {
+        // typography
+        color: #ffffff;
+        text-decoration: none;
+
+        // visual
+        transition: all 0.3s ease-out;
+
+        &:hover {
+            // typography
+            color: $mainBlue;
+        }
+    }
+
+    &__phone {
+        // box model
+        margin-bottom: 5px;
+
+        // typography
+        font-size: 1.25rem;
+        font-weight: 700;
+
+        @include atDesktop {
+            // box model
+            margin-bottom: 10px;
+
+            // typography
+            font-size: 1.5rem;
+        }
+    }
+
+    &__email {
+        // typography
+        font-size: 0.875rem;
+        font-weight: 700;
+
+        // visual
+        opacity: 0.9;
+
+        @include atDesktop {
+            // typography
+            font-size: 1rem;
+        }
+    }
+}

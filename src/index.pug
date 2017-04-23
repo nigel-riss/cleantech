@@ -9,14 +9,34 @@ html
         link(rel="stylesheet", href="styles.css")
 
     body
-        header.site-header.site-header--main
+        header.site-header
             .site-header__wrapper
+                .menu-icon: .menu-icon__middle
+                
                 .search-n-lang
-                    .menu-icon: .menu-icon__middle
                     .search
+                        form.search__form
+                            input(type="text", placeholder="Поиск").search__input
+                            button(type="submit").search__button Найти
+                                .icon-search
                     .language
 
                 .logo: img(src="./img/logo.png")
+
+                .site-header__contacts 
+                    .header-contact
+                        .header-contact__phone
+                            a(href="tel:84012390043") 8 (4012) 39 00 43
+                        .header-contact__email
+                            a(href="mailto:info@baltcleantech.com") info@baltcleantech.com
+                    
+                    .header-contact
+                        .header-contact__title Мы в соцсетях
+                        .social
+                            a(href="").icon-twitter Twitter
+                            a(href="").icon-facebook Facebook
+                            a(href="").icon-linkedin LinkedIn
+                            a(href="").icon-gplus Google+
 
             nav.main-nav.main-nav--main: ul.main-nav__menu
                 - var list = ["О компании", "Новости", "Услуги", "Проекты", "Партнеры", "Вакансии", "Отзывы", "Контакты"];

@@ -39,14 +39,12 @@
 
     @include atDesktop {
         // positioning
-        bottom: 280px;
+        bottom: 270px;
 
-        @media(min-width: 1700px) {
-            padding-right: calc((100% - 1700px) / 2 - 15px);
-        }
         
         // box model
         padding: 20px;
+        padding-right: 30px;
         width: auto;
 
         &::before {
@@ -67,17 +65,9 @@
         }
     }
 
-    // &--main {
-    //     @include atTabletsLandscape {
-    //         // positioning
-    //         bottom: 70px;
-    //     }
-
-    //     @include atDesktop {
-    //         // positioning
-    //         bottom: 100px;
-    //     }
-    // }
+    @media(min-width: 1760px) {
+        padding-right: calc((100% - 1700px) / 2 - 15px);
+    }
 
     &__menu {
         // box model

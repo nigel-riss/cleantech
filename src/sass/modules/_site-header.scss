@@ -3,9 +3,8 @@
     position: relative;
     
     // box model
-    height: 200px;
     padding: 25px;
-    // padding-left: 0;
+    padding-bottom: 15px;
     
     // visual
     background-color: #c8d6e1;
@@ -15,9 +14,9 @@
 
     @include atTabletsPortrait {
         // box model
-        height: 260px;
-        padding-top: 30px;
-        padding-left: 20px;
+        padding: 40px;
+        padding-left: 25px;
+        padding-bottom: 30px;
 
         // visual
         background-image: url('./img/header-bg-l-1x.jpg');
@@ -25,18 +24,14 @@
 
     @include atTabletsLandscape {
         // box model
-        padding-top: 40px;
-        padding-left: 30px;
+        height: 260px;
+        padding-left: 40px;
     }
 
     @include atDesktop {
         // box model
         padding-top: 60px;
         height: 500px;
-
-        // visual
-        // background-size: 100%;
-        // background-attachment: fixed;
     }
 
     &__wrapper {
@@ -44,10 +39,36 @@
         position: relative;
         // border: 1px solid red;
 
+        @include atDesktop {
+            // box model
+            // padding: 0 60px;
+        }
+
         @include atDesktopLarge {
             // box model
+            padding: 0;
             margin: 0 auto;
             max-width: 1700px;
+        }
+    }
+
+    &__contacts {
+        // box model
+        display: block;
+        padding-top: 20px;
+
+        @include atTabletsPortrait {
+            // box model
+            display: inline-block;
+            vertical-align: top;
+            margin-top: -5px;
+            padding-left: 80px;
+            padding-top: 0;
+        }
+
+        @include atDesktop {
+            // box model
+            margin-top: 0;
         }
     }
 }

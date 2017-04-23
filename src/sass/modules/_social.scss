@@ -1,0 +1,26 @@
+.social {
+    // typography
+    font-size: 0;
+
+    a {
+        // box model
+        margin-right: 10px;
+        
+        // visual
+        transition: all 0.3s ease-out;
+
+        &:hover {
+            // typography
+            color: $mainBlue;
+        }
+    }
+
+    a:before {
+        // box model
+        display: inline-block;
+        vertical-align: bottom;
+
+        // typography
+        font-size: 1rem;
+    }
+}

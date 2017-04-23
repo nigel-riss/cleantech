@@ -7,11 +7,13 @@
 ?>
 
 <div class="wrapper">
-    <div class="serv-buttons"><a class="button button--sand" href="#">Печать</a><a class="button button--sand button--ml-30" href="#">Задать вопрос</a></div>
+    <div class="serv-buttons"><a class="button button--clean" href="#">Печать</a><a class="button button--clean button--ml-30" href="#">Задать вопрос</a></div>
+
     <main class="site-main">
         <header class="site-main__header">
             <div class="site-main__breadcumbs">Главная / <span>О Компании</span></div>
         </header>
+
         <div class="site-main__content">
             <div class="about">
                 <div class="about__wrapper">
@@ -41,6 +43,7 @@
             </div>
         </div>
     </main>
+
     <aside class="side-nav">
         <h2 class="side-nav__title">О Компании</h2>
         <ul class="side-nav__menu">

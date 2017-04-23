@@ -1,5 +1,8 @@
 @import "base/wordpress";
 
+// fonts
+@import "fonts/_icons";
+
 // base
 @import "normalize.css";
 @import "base/vars";
@@ -9,6 +12,8 @@
 // modules
 @import "modules/site-header";
 @import "modules/logo";
+@import "modules/header-contact";
+@import "modules/social";
 @import "modules/main-nav";
 @import "modules/hero-n-services";
 @import "modules/hero";

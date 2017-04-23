@@ -7,16 +7,33 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <header class="site-header site-header--main">
+    <header class="site-header">
       <div class="site-header__wrapper">
+        <div class="menu-icon">
+          <div class="menu-icon__middle"></div>
+        </div>
         <div class="search-n-lang">
-          <div class="menu-icon">
-            <div class="menu-icon__middle"></div>
+          <div class="search">
+            <form class="search__form">
+              <input class="search__input" type="text" placeholder="Поиск">
+              <button class="search__button" type="submit">Найти
+                <div class="icon-search"></div>
+              </button>
+            </form>
           </div>
-          <div class="search"></div>
           <div class="language"></div>
         </div>
         <div class="logo"><img src="./img/logo.png"></div>
+        <div class="site-header__contacts"> 
+          <div class="header-contact">
+            <div class="header-contact__phone"><a href="tel:84012390043">8 (4012) 39 00 43</a></div>
+            <div class="header-contact__email"><a href="mailto:info@baltcleantech.com">info@baltcleantech.com</a></div>
+          </div>
+          <div class="header-contact">
+            <div class="header-contact__title">Мы в соцсетях</div>
+            <div class="social"><a class="icon-twitter" href="">Twitter</a><a class="icon-facebook" href="">Facebook</a><a class="icon-linkedin" href="">LinkedIn</a><a class="icon-gplus" href="">Google+</a></div>
+          </div>
+        </div>
       </div>
       <nav class="main-nav main-nav--main">
         <ul class="main-nav__menu">

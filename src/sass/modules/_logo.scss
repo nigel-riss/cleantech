@@ -4,6 +4,7 @@
     z-index: 3;
 
     // box model
+    display: inline-block;
     height: 92px;
     width: 196px;
 
@@ -15,6 +16,7 @@
 
     @include atTabletsLandscape {
         // box model
+        vertical-align: top;
         height: 92px;
         width: 196px;
     }
