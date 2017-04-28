@@ -1596,3 +1596,106 @@ body {
       font-size: 1.125em; }
     .news-page-item__more:hover {
       color: #00baff; }
+
+@media (min-width: 1400px) {
+  .news-post-page {
+    padding-left: 20px; } }
+
+.news-post-page__header {
+  position: relative; }
+  @media (min-width: 1200px) {
+    .news-post-page__header {
+      min-height: 250px; } }
+
+.news-post-page__social a {
+  color: #00baff;
+  text-decoration: none; }
+
+@media (min-width: 1200px) {
+  .news-post-page__social {
+    margin-right: 340px; } }
+
+@media (min-width: 1400px) {
+  .news-post-page__social {
+    margin-right: 440px; } }
+
+.news-post-page__print {
+  display: none;
+  float: right;
+  margin-top: -1.25rem; }
+  @media (min-width: 1200px) {
+    .news-post-page__print {
+      display: block; } }
+  .news-post-page__print a {
+    color: #c8a165;
+    font-size: 1.25rem; }
+
+.news-post-page__title {
+  color: #333333;
+  line-height: 1.4; }
+  @media (min-width: 700px) {
+    .news-post-page__title {
+      padding-right: 340px;
+      font-size: 2rem; } }
+  @media (min-width: 1400px) {
+    .news-post-page__title {
+      padding-right: 420px; } }
+
+.news-post-page__advert {
+  margin-bottom: 40px;
+  padding-left: 15px;
+  color: #333333;
+  color: #666666;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  border-left: 5px solid #00baff; }
+  @media (min-width: 700px) {
+    .news-post-page__advert {
+      padding-right: 340px; } }
+  @media (min-width: 1400px) {
+    .news-post-page__advert {
+      padding-right: 420px; } }
+
+.news-post-page__image {
+  width: 100%; }
+  @media (min-width: 700px) {
+    .news-post-page__image {
+      position: absolute;
+      right: 0;
+      top: 0;
+      display: inline-block;
+      vertical-align: top;
+      width: 320px; } }
+  @media (min-width: 1400px) {
+    .news-post-page__image {
+      width: 400px; } }
+  .news-post-page__image img {
+    width: 100%; }
+
+.news-post-page__content {
+  max-width: 900px; }
+
+.news-post-page__text {
+  margin-bottom: 40px;
+  color: #333333;
+  font-size: 1.125rem;
+  line-height: 1.5; }
+  .news-post-page__text p {
+    text-indent: 2rem; }
+  .news-post-page__text li {
+    margin-bottom: 0.5em; }
+  .news-post-page__text a {
+    color: #00baff;
+    text-decoration: none; }
+    .news-post-page__text a:hover {
+      text-decoration: underline; }
+
+.news-post-page__source {
+  font-weight: 700;
+  text-align: right; }
+  .news-post-page__source a {
+    color: #00baff;
+    text-decoration: none; }
+    .news-post-page__source a:hover {
+      text-decoration: underline; }
