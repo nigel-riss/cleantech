@@ -83,7 +83,7 @@
         margin-bottom: 10px;
         padding-top: 25px;
         overflow: hidden;
-        height: 85px;
+        height: 90px;
     }
 
     &__day {
@@ -160,12 +160,29 @@
     &__more {
         // box model
         display: block;
-        margin-top: 25px;
+        padding-top: 25px;
 
         // typography
-        color: $mainSand;
-        font-size: 1rem;
+        color: $mainTitle;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-align: right;
         text-decoration: none;
+        text-transform: uppercase;
+
+        // visual
+        border-top: 1px solid $mainSand;
+        transition: all 0.3s ease-out;
+
+        div {
+            // box model
+            // margin-top: -2px;
+            display: inline-block;
+
+            // typography
+            color: $mainBlue;
+            font-size: 1.125em;
+        }
 
         &:hover {
             // typography

@@ -59,6 +59,12 @@
 
 
         <nav class="main-nav main-nav--main">
+            <div class="main-nav__home">
+                <a href="<?php echo esc_url(home_url('/')); ?>">
+                    <div class="icon-home"></div>
+                </a>
+            </div>
+
             <?php
                 $args = array(
                     'theme_location'      => 'primary',

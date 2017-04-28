@@ -50,20 +50,6 @@
         padding-right: 30px;
         width: auto;
 
-        // &::after {
-        //     content: '\e801';
-
-        //     // positioning
-        //     position: absolute;
-        //     left: -28px;
-        //     top: 30px;
-
-        //     // typography
-        //     color: #ffffff;
-        //     font-family: "fontello";
-        //     font-size: 1rem;
-        // }
-
         &::before {
             content: "";
 
@@ -86,8 +72,20 @@
         padding-right: calc((100% - 1700px) / 2 - 15px);
     }
 
+    &__home {
+        // box model
+        display: inline-block;
+        vertical-align: top;
+
+        div {
+            // box model
+        }
+    }
+
     &__menu {
         // box model
+        display: inline-block;
+        vertical-align: top;
         margin: 0;
         padding: 0;
 

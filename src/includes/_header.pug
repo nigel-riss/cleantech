@@ -38,11 +38,11 @@ html
                             a(href="").icon-linkedin LinkedIn
                             a(href="").icon-gplus Google+
 
-            nav.main-nav.main-nav--main: ul.main-nav__menu
-                - var list = ["О компании", "Новости", "Услуги", "Проекты", "Партнеры", "Вакансии", "Отзывы", "Контакты"];
-                - var links = ["about.html", "news.html", "#", "#", "#", "#", "#", "contacts.html"]
-                    li 
-                        a(href="#"): .icon-home
-                - for (var i = 0; i < 8; i++)
-                    li
-                        a(href=links[i])= list[i]
+            nav.main-nav.main-nav--main
+                .main-nav__home: a(href="#"): .icon-home
+                ul.main-nav__menu
+                    - var list = ["О компании", "Новости", "Услуги", "Проекты", "Партнеры", "Вакансии", "Отзывы", "Контакты"];
+                    - var links = ["about.html", "news.html", "#", "#", "#", "#", "#", "contacts.html"]
+                    - for (var i = 0; i < 8; i++)
+                        li
+                            a(href=links[i])= list[i]

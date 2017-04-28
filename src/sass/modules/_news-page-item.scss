@@ -146,17 +146,17 @@
         text-transform: uppercase;
 
         // visual
-        border-top: 1px solid #bbbbbb;
+        border-top: 1px solid $mainSand;
         transition: all 0.3s ease-out;
 
         @include atTabletsLandscape {
             // positioning
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            
+            // position: absolute;
+            // bottom: 0;
+            // right: 0;
+
             // box model
-            width: calc(100% - 30px);
+            // width: calc(100% - 30px);
         }
 
         div {

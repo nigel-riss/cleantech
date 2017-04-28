@@ -49,7 +49,7 @@
                 <p class="hero__text">
                     <?php echo($description); ?>
                 </p>
-                <a class="button"href="<?php echo esc_url(home_url('/')); ?>about">О компании</a>
+                <a class="button" href="<?php echo esc_url(home_url('/')); ?>about">О компании</a>
             </div>
         </section>
 
@@ -109,7 +109,7 @@
                     </p>
                 </article>
 
-                <a class="button button--mt-40" href="#">Все услуги</a>
+                <a class="button button--mt-40" href="<?php echo esc_url(home_url('/')); ?>services">Все услуги</a>
             </div>
 
             <div class="services__dir">
@@ -156,10 +156,11 @@
                 </article>
 
             </div>
-            <div class="services__projects">
+            <!--<div class="services__projects">
                 <p class="services__subtitle">Наши проекты</p>
-                <p class="services__text">Перечень текущих и реализованных проектов нашей компанией</p><a class="button button--sand" href="#">Наши проекты</a>
-            </div>
+                <p class="services__text">Перечень текущих и реализованных проектов нашей компанией</p>
+                <a class="button button--sand" href="#">Наши проекты</a>
+            </div>-->
         </section>
     </div>
 
@@ -167,23 +168,54 @@
         <header class="news__header">
             <h2 class="news__title">Новости</h2>
         </header>
+
         <div class="news__wrapper">
-            <article class="news-item">
-                <div class="news-item__image"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/news/photo-1.jpg"></div>
-                <div class="news-item__text-wrapper">
-                    <header class="news-item__header">
-                        <div class="news-item__day">07</div>
-                        <div class="news-item__date">февраля, 2017</div>
-                        <h3 class="news-item__title">Скандал с выбросами VW</h3>
-                    </header>
-                    <div class="news-item__content">
-                        <div class="news-item__text">К таким выводам пришли члены Европейского парламента, обсуждавшие результаты надавнего скандала с
-                            концерном Фольксваген</div>
-                        <a class="news-item__more" href="#">Читать дальше...</a>
+            <?php
+                $args = array(
+                    'category_name' => "spotlight"
+                );
+
+                query_posts($args);
+
+                if (have_posts()) {
+                    $counter = 0;
+                    while(have_posts() && ($counter < 3)) {
+                        $counter++;
+                        the_post();
+                        // vars
+                        $main_photo     = get_field('main-photo');
+                        $advert         = get_field('advert');
+            ?>
+
+                <article class="news-item">
+                    <div class="news-item__image">
+                        <img src="<?php echo $main_photo; ?>">
                     </div>
-                </div>
-            </article>
-            <article class="news-item">
+                    <div class="news-item__text-wrapper">
+                        <header class="news-item__header">
+                            <div class="news-item__day">07</div>
+                            <div class="news-item__date">февраля, 2017</div>
+                            <h3 class="news-item__title">
+                                <?php the_title(); ?>
+                            </h3>
+                        </header>
+                        <div class="news-item__content">
+                            <div class="news-item__text">
+                                <?php echo $advert; ?>
+                            </div>
+                            <a class="news-item__more" href="<?php the_permalink(); ?>">
+                                Читать дальше <div class="icon-arrow"></div>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+            <?php
+                    }
+                }
+            ?>
+
+            <!--<article class="news-item">
                 <div class="news-item__image"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/news/photo-2.jpg"></div>
                 <div class="news-item__text-wrapper">
                     <header class="news-item__header">
@@ -211,7 +243,7 @@
                         </div><a class="news-item__more" href="#">Читать дальше...</a>
                     </div>
                 </div>
-            </article>
+            </article>-->
         </div>
     </section>
 
