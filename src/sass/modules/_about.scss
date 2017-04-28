@@ -1,4 +1,12 @@
 .about {
+    // box model
+    margin: 0 -25px;
+
+    @include atTabletsPortrait {
+        // box model
+        margin: 0;
+    }
+
     @include atDesktop {
         // box model
         padding: 40px;

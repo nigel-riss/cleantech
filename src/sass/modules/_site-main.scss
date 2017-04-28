@@ -1,8 +1,10 @@
 .site-main {
-    // box model
+    // positioning
+    position: relative;
+    z-index: 2;
 
-    // visual
-    // background-color: #ffffff;
+    // box model
+    // border: 1px solid red;
 
     @include atTabletsPortrait {
         // box model
@@ -52,7 +54,7 @@
 
     &__content {
         // box model
-        padding: 30px 0;
+        padding: 30px 25px;
 
         // visual
         box-shadow: 0 0 20px rgba(#212121, 0.25);

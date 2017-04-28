@@ -1,110 +1,66 @@
-doctype html
+include includes/_header.pug
 
-html
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport",
-            content="width=device-width, initial-scale=1")
-        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,700&amp;subset=cyrillic")
-        link(rel="stylesheet", href="styles.css")
+.hero-n-services
+    section.hero
+        .hero__wrapper
+            p.hero__welcome Добро пожаловать
+            h1.hero__title Чистые Технологии Балтики
+            p.hero__subtitle Чистые Технологии для жизни
+            p.hero__text
+                | Наша компания специализируется на оказании услуг в области возобновляемой энергетики, а также в сфере внедрения экологически чистых и ресурсосберегающих технологий, как для бизнеса, так и для частных лиц. Мы предлагаем комплексные технические решения «под ключ» — от консалтинга и проектирования до поставки оборудования, введения в эксплуатацию и технического обслуживания объектов.
+            a(href='about.html').button О компании
 
-    body
-        header.site-header
-            .site-header__wrapper
-                .menu-icon: .menu-icon__middle
-                
-                .search-n-lang
-                    .search
-                        form.search__form
-                            input(type="text", placeholder="Поиск").search__input
-                            button(type="submit").search__button Найти
-                                .icon-search
-                    .language
+    section.services
+        .services__main
+            h2.services__title Наши услуги
+            mixin service-item(title, text, iconUrl)
+                article.service-item
+                    .service-item__icon: img(src=iconUrl, alt=title)
+                    h3.service-item__title= title
+                    p.service-item__text= text
+            +service-item("Проектирование", "Проектирование и консалтинг проектов ВИЭ", "./img/icons/project.png")
+            +service-item("Обслуживание", "Обслужинвание объектов ВИЭ, услуги ОЕМ", "./img/icons/service.png")
+            +service-item("Поставка оборудования", "Поставка оборудования для проектов ВИЭ", "./img/icons/delivery.png")
+            +service-item("Монтаж оборудования", "Монтаж оборудования и пуско-наладочные работы", "./img/icons/mount.png")
 
-                .logo: img(src="./img/logo.png")
+            a(href="#").button.button--mt-40 Все услуги
 
-                .site-header__contacts 
-                    .header-contact
-                        .header-contact__phone
-                            a(href="tel:84012390043") 8 (4012) 39 00 43
-                        .header-contact__email
-                            a(href="mailto:info@baltcleantech.com") info@baltcleantech.com
-                    
-                    .header-contact
-                        .header-contact__title Мы в соцсетях
-                        .social
-                            a(href="").icon-twitter Twitter
-                            a(href="").icon-facebook Facebook
-                            a(href="").icon-linkedin LinkedIn
-                            a(href="").icon-gplus Google+
+        .services__dir
+            p.services__subtitle По направлениям
+            mixin service-item-dir(title, iconUrl)
+                article.service-item-dir
+                    .service-item-dir__icon: img(src=iconUrl, alt=title)
+                    h3.service-item-dir__title= title
+            +service-item-dir("Переработка отходов", "./img/icons/recycle.png")
+            +service-item-dir("Возобновляемые источники энергии", "./img/icons/solar.png")
+            +service-item-dir("Водоочистка", "./img/icons/water.png")
+            +service-item-dir("Повышение энерго-эффективности", "./img/icons/energy.png")
 
-            nav.main-nav.main-nav--main: ul.main-nav__menu
-                - var list = ["О компании", "Новости", "Услуги", "Проекты", "Партнеры", "Вакансии", "Отзывы", "Контакты"];
-                - for (var i = 0; i < 8; i++)
-                    li
-                        a(href="#")= list[i]
-            
-        .hero-n-services
-            section.hero
-                .hero__wrapper
-                    p.hero__welcome Добро пожаловать
-                    h1.hero__title Чистые Технологии Балтики
-                    p.hero__subtitle Чистые Технологии для жизни
-                    p.hero__text
-                        | Наша компания специализируется на оказании услуг в области возобновляемой энергетики, а также в сфере внедрения экологически чистых и ресурсосберегающих технологий, как для бизнеса, так и для частных лиц. Мы предлагаем комплексные технические решения «под ключ» — от консалтинга и проектирования до поставки оборудования, введения в эксплуатацию и технического обслуживания объектов.
-                    a(href='about.html').button О компании
-        
-            section.services
-                .services__main
-                    h2.services__title Наши услуги
-                    mixin service-item(title, text, iconUrl)
-                        article.service-item
-                            .service-item__icon: img(src=iconUrl, alt=title)
-                            h3.service-item__title= title
-                            p.service-item__text= text
-                    +service-item("Проектирование", "Проектирование и консалтинг проектов ВИЭ", "./img/icons/project.png")
-                    +service-item("Обслуживание", "Обслужинвание объектов ВИЭ, услуги ОЕМ", "./img/icons/service.png")
-                    +service-item("Поставка оборудования", "Поставка оборудования для проектов ВИЭ", "./img/icons/delivery.png")
-                    +service-item("Монтаж оборудования", "Монтаж оборудования и пуско-наладочные работы", "./img/icons/mount.png")
+        .services__projects
+            p.services__subtitle Наши проекты
+            p.services__text Перечень текущих и реализованных проектов нашей компанией
+            a(href="#").button.button--sand Наши проекты
 
-                    a(href="#").button.button--mt-40 Все услуги
 
-                .services__dir
-                    p.services__subtitle По направлениям
-                    mixin service-item-dir(title, iconUrl)
-                        article.service-item-dir
-                            .service-item-dir__icon: img(src=iconUrl, alt=title)
-                            h3.service-item-dir__title= title
-                    +service-item-dir("Переработка отходов", "./img/icons/recycle.png")
-                    +service-item-dir("Возобновляемые источники энергии", "./img/icons/solar.png")
-                    +service-item-dir("Водоочистка", "./img/icons/water.png")
-                    +service-item-dir("Повышение энерго-эффективности", "./img/icons/energy.png")
+section.news
+    mixin news-item(imgUrl, day, month, year, title, text)
+        article.news-item
+            .news-item__image: img(src=imgUrl)
+            .news-item__text-wrapper
+                header.news-item__header
+                    .news-item__day= day
+                    .news-item__date= month + ", " + year
+                    h3.news-item__title= title
+                .news-item__content
+                    .news-item__text= text
+                    a(href="#").news-item__more Читать дальше...
 
-                .services__projects
-                    p.services__subtitle Наши проекты
-                    p.services__text Перечень текущих и реализованных проектов нашей компанией
-                    a(href="#").button.button--sand Наши проекты
+    header.news__header
+        h2.news__title Новости
 
-        
-        section.news
-            mixin news-item(imgUrl, day, month, year, title, text)
-                article.news-item
-                    .news-item__image: img(src=imgUrl)
-                    .news-item__text-wrapper
-                        header.news-item__header
-                            .news-item__day= day
-                            .news-item__date= month + ", " + year
-                            h3.news-item__title= title
-                        .news-item__content
-                            .news-item__text= text
-                            a(href="#").news-item__more Читать дальше...
+    .news__wrapper
+        +news-item("./img/news/photo-1.jpg", "07", "февраля", "2017", "Скандал с выбросами VW", "К таким выводам пришли члены Европейского парламента, обсуждавшие результаты надавнего скандала с концерном Фольксваген")
+        +news-item("./img/news/photo-2.jpg", "10", "ферваля", "2017", "Микропластик в Балтике", "Шведское агентство по химическим веществам (KEMI) проведет в 2017 году исследование о расширении списка запрещенных косметических продуктов")
+        +news-item("./img/news/photo-3.jpg", "12", "февраля", "2017", "Новый проект фонда НЕФКО", "НЕФКО - Северная экологическая финансовая корпорация, подписала договор об инвестициях в свой первый сельскохозяйственный проект")
 
-            header.news__header
-                h2.news__title Новости
-
-            .news__wrapper
-                +news-item("./img/news/photo-1.jpg", "07", "февраля", "2017", "Скандал с выбросами VW", "К таким выводам пришли члены Европейского парламента, обсуждавшие результаты надавнего скандала с концерном Фольксваген")
-                +news-item("./img/news/photo-2.jpg", "10", "ферваля", "2017", "Микропластик в Балтике", "Шведское агентство по химическим веществам (KEMI) проведет в 2017 году исследование о расширении списка запрещенных косметических продуктов")
-                +news-item("./img/news/photo-3.jpg", "12", "февраля", "2017", "Новый проект фонда НЕФКО", "НЕФКО - Северная экологическая финансовая корпорация, подписала договор об инвестициях в свой первый сельскохозяйственный проект")
-
-        include includes/_footer.pug 
+include includes/_footer.pug 

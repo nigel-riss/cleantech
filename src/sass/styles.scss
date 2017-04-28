@@ -10,6 +10,7 @@
 @import "base/global";
 
 // modules
+//      site-header
 @import "modules/site-header";
 @import "modules/logo";
 @import "modules/header-contact";
@@ -36,3 +37,7 @@
 @import "modules/side-nav";
 @import "modules/about";
 @import "modules/serv-buttons";
+
+//      contacts-page
+@import "modules/contacts-page";
+@import "modules/contact-info";

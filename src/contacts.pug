@@ -1,0 +1,38 @@
+include includes/_header.pug
+
+.wrapper
+    .serv-buttons
+        a(href="#").button.button--clean Печать
+        a(href="#").button.button--clean.button--ml-30 Задать вопрос
+
+    main.site-main
+        header.site-main__header
+            .site-main__breadcumbs Главная / #[span О Компании]
+
+        .site-main__content
+            .contacts-page
+                .contacts-page__contacts
+                    header.contacts-page__header
+                        h2.contacts-page__title Контактная информация
+                    mixin contact-info($title, $text)
+                        .contact-info
+                            h3.contact-info__title= $title
+                            p.contact-info__text!= $text
+                    +contact-info("Адрес", "236006, г. Калининград,<br>ул.Больничная, д. 4,<br>офис 52")
+                    +contact-info("Электропочта", "<a href=\"mailto: info@baltcleantech.com\">info@baltcleantech.com</a> ")
+                    +contact-info("Телефон", "<a href=\"tel: +74012390043\">+7 (4012) 39-00-43</a>")
+                    +contact-info("Режим работы", "Пн-Пт, с 9:00 до 18:00")
+                    .contacts-page__text Если у вас остались вопросы по назначению наших услуг, отправте нам сообщение, заполнив форму и наши специалисты проконсультируют вас. 
+                    .contacts-page__buttons: a(href="#").button Задать вопрос
+                .contacts-page__map
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1152.3775636530727!2d20.50249988824679!3d54.713931221337404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e31604b9412317%3A0x35a129eab9b2d5af!2z0YPQuy4g0JHQvtC70YzQvdC40YfQvdCw0Y8sIDQsINCa0LDQu9C40L3QuNC90LPRgNCw0LQsINCa0LDQu9C40L3QuNC90LPRgNCw0LTRgdC60LDRjyDQvtCx0LsuLCAyMzYwMDY!5e0!3m2!1sru!2sru!4v1493317669147" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    
+    aside.side-nav
+        h2.side-nav__title Контакты
+        ul.side-nav__menu
+            li: a(href="#") Общая информация
+            li: a(href="#") Наша команда
+            li: a(href="#") Контакты
+
+
+include includes/_footer.pug

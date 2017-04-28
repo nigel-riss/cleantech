@@ -1,0 +1,40 @@
+.contact-info {
+    // box model
+    margin-bottom: 40px;
+
+    &__title {
+        // box model
+        margin: 0;
+        padding-bottom: 10px;
+
+        // typography
+        color: $mainBlue;
+        font-size: 1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        // box model
+        margin: 0;
+
+        // typography
+        color: $mainCopy;
+        font-size: 1.25rem;
+        line-height: 1.4;
+    }
+
+    a {
+        // typography
+        color: $mainCopy;
+        text-decoration: none;
+
+        // visual
+        transition: all 0.3s ease-out;
+
+        &:hover {
+            // typography
+            color: $mainBlue;
+        }
+    }
+}

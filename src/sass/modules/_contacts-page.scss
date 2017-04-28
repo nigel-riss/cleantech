@@ -1,0 +1,79 @@
+.contacts-page {
+    // box model
+    // padding: 0 25px;
+    margin-bottom: 20px;
+    width: 100%;
+
+    // typography
+    font-size: 0;
+
+    &__contacts {
+        // box model
+        margin-bottom: 60px;
+
+        @include atTabletsLandscape {
+            // box model
+            display: inline-block;
+            vertical-align: top;
+            width: 400px;
+            margin-bottom: 0;
+            margin-right: 30px;
+        }
+    }
+
+    &__title {
+        // box model
+        display: inline-block;
+        margin-bottom: 30px;
+
+        // typography
+        color: $mainTitle;
+        font-size: 1.375rem;
+        font-weight: 700;
+        line-height: 1.4;
+        text-transform: uppercase;
+
+        @include blueUnderline;
+    }
+
+    &__text {
+        // typography
+        color: $mainCopy;
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    &__buttons {
+        // box model
+        margin-top: 30px;
+
+        @include atTabletsLandscape {
+            // typography
+            text-align: right;
+        }
+    }
+
+    &__map {
+        // box model
+        height: 100vw;
+        padding: 5px;
+        // height: 600px;
+
+        // visual
+        // box-shadow: 0 0 20px rgba(#212121, 0.25);
+        border: 2px solid $mainBlue;
+
+        @include atTabletsPortrait {
+            // box model
+            height: 60vw;
+        }
+
+        @include atTabletsLandscape {
+            // box model
+            display: inline-block;
+            vertical-align: top;
+            width: calc(100% - 430px);
+            height: 665px;
+        }
+    }
+}

@@ -49,7 +49,7 @@
                 <p class="hero__text">
                     <?php echo($description); ?>
                 </p>
-                <a class="button" href="about.html">О компании</a>
+                <a class="button"href="<?php echo esc_url(home_url('/')); ?>about">О компании</a>
             </div>
         </section>
 
