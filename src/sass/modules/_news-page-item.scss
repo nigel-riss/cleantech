@@ -1,77 +1,54 @@
-.news-item {
+.news-page-item {
     // box model
-    padding: 25px;
+    margin-bottom: 40px;
 
     // typography
     font-size: 0;
-    transition: all 0.6s ease-out;
 
-    @include atTabletsLandscape {
-        // box model
-        width: 31.2%;
-        padding: 0;
-    }
-
-    @include atDesktop {
-        // box model
-        padding: 25px;
-
-        // visual
-        background-color: #ffffff;
-        box-shadow: 0 0 7px 0 rgba(#212121, 0.2);
-        background-position: 500px 0;
-        background-repeat: no-repeat;
-        background-image: linear-gradient(73deg, #ffffff 0, #ffffff 53%, $lightBlue 53.25%, $lightBlue 100%);
-    }
-
-    &:hover {
-        // visual
-        background-position: 0;
-        // background-color: $lighterBlue;
-        box-shadow: 0 0 21px 0 rgba(#212121, 0.5);
-    }
 
     &__image {
-        // box model
-        margin-left: -25px;
+        @include atTabletsPortrait {
+            // box model
+            display: inline-block;
+            vertical-align: top;
+            height: 200px;
+            width: 320px;
+        }
+
+        @include atDesktopLarge {
+            // box model
+            height: 250px;
+            width: 400px;
+        }
 
         img {
             // box model
             width: 100%;
         }
-
-        @include atTabletsPortrait {
-            // box model
-            display: inline-block;
-            vertical-align: top;
-            width: 320px;
-            margin-left: 0;
-        }
-
-        @include atTabletsLandscape {
-            // box model
-            display: block;
-            width: 100%;
-            margin-left: 0;
-        }
     }
 
-    &__text-wrapper {
+    &__wrapper {
+        // positioning
+        position: relative;
+
         @include atTabletsPortrait {
             // box model
             display: inline-block;
             vertical-align: top;
             width: calc(100% - 320px);
             padding-left: 20px;
-            margin-top: -25px;
         }
 
         @include atTabletsLandscape {
             // box model
-            display: block;
-            width: 100%;
-            padding-left: 0;
-            margin-top: 0;
+            padding-left: 30px;
+            min-height: 200px;
+        }
+
+        @include atDesktopLarge {
+            // box model
+            width: calc(100% - 400px);
+            min-height: 250px;
         }
     }
 
@@ -80,10 +57,11 @@
         position: relative;
 
         // box model
-        margin-bottom: 10px;
-        padding-top: 25px;
-        overflow: hidden;
-        height: 85px;
+        padding-top: 20px;
+
+        @include atTabletsPortrait {
+            padding-top: 0;
+        }
     }
 
     &__day {
@@ -107,7 +85,7 @@
 
     &__date {
         // box model
-        margin-top: -2px;
+        // margin-top: -2px;
         padding-left: 50px;
 
         // typography
@@ -121,51 +99,75 @@
         // box model
         margin: 0;
         padding: 0;
-        padding-left: 50px;
-        padding-top: 5px;
+        padding-top: 2px;
+        padding-bottom: 10px;
 
         // typography
         color: $mainTitle;
         font-size: 1rem;
-        font-weight: 700;
-        line-height: 1.4;
+        line-height: 1.6;
+        text-indent: 50px;
         text-transform: uppercase;
-        // white-space: nowrap;
+        // border: 1px solid red;
     }
 
     &__content {
-        // box model
-        padding: 0;
+        // // positioning
+        // position: relative;
+
+        // @include atTabletsLandscape {
+        //     min-height: 145px;
+        // }
+        // // border: 1px solid red;
     }
 
     &__text {
         // box model
-        margin: 0;
-        padding: 0;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
 
         // typography
         color: $mainCopy;
-        line-height: 1.5;
         font-size: 1rem;
-
-        @include atTabletsLandscape {
-            // box model
-            height: 8em;
-            
-            // visual
-            overflow: hidden;
-        }
+        line-height: 1.5;
     }
 
     &__more {
         // box model
         display: block;
-        margin-top: 25px;
+        padding-top: 10px;
 
         // typography
-        color: $mainSand;
-        font-size: 1rem;
+        color: $mainCopy;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-align: right;
         text-decoration: none;
+        text-transform: uppercase;
+
+        // visual
+        border-top: 1px solid #bbbbbb;
+        transition: all 0.3s ease-out;
+
+        @include atTabletsLandscape {
+            // positioning
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            
+            // box model
+            width: calc(100% - 30px);
+        }
+
+        div {
+            // box model
+            // margin-top: -2px;
+            display: inline-block;
+
+            // typography
+            color: $mainBlue;
+            font-size: 1.125em;
+        }
 
         &:hover {
             // typography

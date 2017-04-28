@@ -37,18 +37,23 @@
 
     &__breadcumbs {
         // typography
-        color: #ffffff;
+        color: $mainTitle;
         text-transform: uppercase;
+
+        @include atTabletsPortrait {
+            // typography
+            font-size: 1.25rem;
+        }
+
+        @include atDesktop {
+            // typography
+            color: #ffffff;
+        }
 
         span {
             // typography
             color: $mainBlue;
             // font-weight: 700;
-        }
-
-        @include atTabletsPortrait {
-            // typography
-            font-size: 1.25rem;
         }
     }
 

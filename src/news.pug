@@ -1,0 +1,37 @@
+include includes/_header.pug
+
+.wrapper
+    .serv-buttons
+        a(href="#").button.button--clean Печать
+        a(href="#").button.button--clean.button--ml-30 Задать вопрос
+
+    main.site-main
+        header.site-main__header
+            .site-main__breadcumbs Главная / #[span Новости]
+
+        .site-main__content
+            .news-page
+                mixin news-page-item(imgUrl, day, month, year, title, text)
+                    article.news-page-item
+                        .news-page-item__image: img(src=imgUrl)
+                        .news-page-item__wrapper
+                            header.news-page-item__header
+                                .news-page-item__day= day
+                                .news-page-item__date= month + ", " + year
+                                h3.news-page-item__title= title
+                            .news-page-item__content
+                                .news-page-item__text= text
+                                a(href="#").news-page-item__more Читать дальше #[.icon-arrow]
+                
+                +news-page-item("./img/news/photo-1.jpg", "07", "февраля", "2017", "Россия обладает мощным потенциалом для развития возобновляемой энергетики", "К таким выводам пришли члены Европейского парламента, обсуждавшие результаты надавнего скандала с концерном Фольксваген")
+                +news-page-item("./img/news/photo-2.jpg", "10", "ферваля", "2017", "Микропластик в Балтике", "Шведское агентство по химическим веществам (KEMI) проведет в 2017 году исследование о расширении списка запрещенных косметических продуктов")
+                +news-page-item("./img/news/photo-3.jpg", "12", "февраля", "2017", "Новый проект фонда НЕФКО", "НЕФКО - Северная экологическая финансовая корпорация, подписала договор об инвестициях в свой первый сельскохозяйственный проект")
+    aside.side-nav
+        h2.side-nav__title Контакты
+        ul.side-nav__menu
+            li: a(href="#") Общая информация
+            li: a(href="#") Наша команда
+            li: a(href="#") Контакты
+
+
+include includes/_footer.pug
