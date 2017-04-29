@@ -199,6 +199,7 @@
                                 <?php the_title(); ?>
                             </h3>
                         </header>
+
                         <div class="news-item__content">
                             <div class="news-item__text">
                                 <?php echo $advert; ?>
@@ -215,38 +216,9 @@
                 }
             ?>
 
-            <!--<article class="news-item">
-                <div class="news-item__image"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/news/photo-2.jpg"></div>
-                <div class="news-item__text-wrapper">
-                    <header class="news-item__header">
-                        <div class="news-item__day">10</div>
-                        <div class="news-item__date">ферваля, 2017</div>
-                        <h3 class="news-item__title">Микропластик в Балтике</h3>
-                    </header>
-                    <div class="news-item__content">
-                        <div class="news-item__text">Шведское агентство по химическим веществам (KEMI) проведет в 2017 году исследование о расширении
-                            списка запрещенных косметических продуктов</div><a class="news-item__more" href="#">Читать дальше...</a>
-                    </div>
-                </div>
-            </article>
-            <article class="news-item">
-                <div class="news-item__image"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/news/photo-3.jpg"></div>
-                <div class="news-item__text-wrapper">
-                    <header class="news-item__header">
-                        <div class="news-item__day">12</div>
-                        <div class="news-item__date">февраля, 2017</div>
-                        <h3 class="news-item__title">Новый проект фонда НЕФКО</h3>
-                    </header>
-                    <div class="news-item__content">
-                        <div class="news-item__text">НЕФКО - Северная экологическая финансовая корпорация, подписала договор об инвестициях в свой первый
-                            сельскохозяйственный проект
-                        </div><a class="news-item__more" href="#">Читать дальше...</a>
-                    </div>
-                </div>
-            </article>-->
         </div>
     </section>
 
-    <?php
+<?php
   get_footer();
 ?>

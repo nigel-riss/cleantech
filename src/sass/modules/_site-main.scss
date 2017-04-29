@@ -68,6 +68,7 @@
         @include atDesktop {
             // box model
             padding: 40px;
+            min-height: 600px;
         }
     }
 

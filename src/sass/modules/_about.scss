@@ -53,7 +53,9 @@
 
     &__text {
         // typography
+        color: $mainCopy;
         line-height: 1.5;
+        text-indent: 2rem;
     }
 
     &__signature {

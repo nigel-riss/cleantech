@@ -1,0 +1,12 @@
+.search-page {
+    // box model
+    max-width: 800px;
+
+    &__title {
+        // box model
+        padding-bottom: 20px;
+        
+        // typography
+        color: $mainTitle;
+    }
+}

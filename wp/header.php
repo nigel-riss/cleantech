@@ -28,11 +28,11 @@
                 <div class="language"></div>
 
                 <div class="search">
-                    <form class="search__form">
-                        <input class="search__input" type="text" placeholder="Поиск">
-                        <button class="search__button" type="submit">Найти
-                                <div class="icon-search"></div>
-                            </button>
+                    <form class="search__form" method="get" action="<?php esc_url(home_url('/')); ?>">
+                        <input class="search__input" name="s" type="text" placeholder="Поиск">
+                        <button class="search__button" type="submit">
+                            Найти <div class="icon-search"></div>
+                        </button>
                     </form>
                 </div>
 
