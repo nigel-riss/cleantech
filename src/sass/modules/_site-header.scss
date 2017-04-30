@@ -37,12 +37,6 @@
     &__wrapper {
         // positioning
         position: relative;
-        // border: 1px solid red;
-
-        @include atDesktop {
-            // box model
-            // padding: 0 60px;
-        }
 
         @include atDesktopLarge {
             // box model

@@ -1,6 +1,6 @@
 .contact {
     // box model
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 
     @include atTabletsPortrait {
         // box model
@@ -10,6 +10,7 @@
     &__name {
         // box model
         display: inline-block;
+        padding-bottom: 10px;
 
         // typography
         color: $mainBlue;
@@ -19,7 +20,13 @@
 
     &__value {
         // box model
-        display: inline-block;
+        display: inline;
+
+        // typography
+        color: #ffffff;
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 1.5;
         
         a {
             // box model

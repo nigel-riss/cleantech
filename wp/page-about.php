@@ -7,7 +7,10 @@
 ?>
 
 <div class="wrapper">
-    <div class="serv-buttons"><a class="button button--clean" href="#">Печать</a><a class="button button--clean button--ml-30" href="#">Задать вопрос</a></div>
+    <div class="serv-buttons">
+        <a class="button button--clean" href="#" onclick="printPage()">Печать</a>
+        <a class="button button--clean button--ml-30" href="<?php echo esc_url(home_url('/')); ?>ask">Задать вопрос</a>
+    </div>
 
     <main class="site-main">
         <header class="site-main__header">

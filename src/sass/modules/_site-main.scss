@@ -9,6 +9,12 @@
     @include atTabletsPortrait {
         // box model
         padding: 25px;
+        margin-bottom: 20px;
+    }
+
+    @include atTabletsLandscape {
+        // box model
+        margin-bottom: -80px;
     }
 
     @include atDesktop {
@@ -17,6 +23,7 @@
         vertical-align: top;
         width: calc(100% - 300px);
         padding-left: 0;
+        margin-bottom: -120px;
     }
 
     &__header {
@@ -75,10 +82,46 @@
     &__content-wrapper {
         // box model
         padding: 25px;
+        max-width: 800px;
 
         @include atTabletsPortrait {
             // box model
             padding: 25px 40px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            // typography
+            color: $mainTitle;
+        }
+
+        p {
+            // typography
+            color: $mainCopy;
+            line-height: 1.5;
+            text-indent: 2rem;
+        }
+
+        li {
+            // box model
+            margin-bottom: 0.5em;
+
+            // typography
+            color: $mainCopy;
+            line-height: 1.5;
+        }
+
+        a {
+            // typography
+            color: $mainBlue;
+            text-decoration: none;
+
+            &:hover {
+                // typography
+                text-decoration: underline;
+            }
         }
     }
 }

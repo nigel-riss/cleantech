@@ -1,9 +1,16 @@
 .news-page-item {
     // box model
     margin-bottom: 40px;
+    max-width: 1000px;
 
     // typography
     font-size: 0;
+
+    @include atDesktop {
+        // box model
+        // margin: 0 auto;
+        // margin-left: 20px;
+    }
 
 
     &__image {
@@ -15,11 +22,11 @@
             width: 320px;
         }
 
-        @include atDesktopLarge {
-            // box model
-            height: 250px;
-            width: 400px;
-        }
+        // @include atDesktopLarge {
+        //     // box model
+        //     height: 250px;
+        //     width: 400px;
+        // }
 
         img {
             // box model
@@ -101,12 +108,13 @@
         padding: 0;
         padding-top: 2px;
         padding-bottom: 10px;
+        padding-left: 50px;
 
         // typography
         color: $mainTitle;
         font-size: 1rem;
         line-height: 1.6;
-        text-indent: 50px;
+        // text-indent: 50px;
         text-transform: uppercase;
         // border: 1px solid red;
     }

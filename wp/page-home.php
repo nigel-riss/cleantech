@@ -33,6 +33,10 @@
     $dir_4            = get_field('dir-4');
     $dir_icon_4       = get_field('dir-icon-4');
 
+    // backgrounds
+    $header_bg        = get_field('header-bg');
+    $footer_bg        = get_field('footer-bg');
+
     get_header();
 ?>
 
@@ -156,11 +160,11 @@
                 </article>
 
             </div>
-            <!--<div class="services__projects">
+            <div class="services__projects">
                 <p class="services__subtitle">Наши проекты</p>
                 <p class="services__text">Перечень текущих и реализованных проектов нашей компанией</p>
                 <a class="button button--sand" href="#">Наши проекты</a>
-            </div>-->
+            </div>
         </section>
     </div>
 
@@ -193,8 +197,12 @@
                     </div>
                     <div class="news-item__text-wrapper">
                         <header class="news-item__header">
-                            <div class="news-item__day">07</div>
-                            <div class="news-item__date">февраля, 2017</div>
+                            <div class="news-item__day">
+                                <?php echo get_the_date('j'); ?>
+                            </div>
+                            <div class="news-item__date">
+                                <?php echo get_the_date('F, Y'); ?>
+                            </div>
                             <h3 class="news-item__title">
                                 <?php the_title(); ?>
                             </h3>

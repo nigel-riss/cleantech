@@ -1,6 +1,6 @@
 <?php
     /*
-        Template Name: Progress Page
+        Template Name: Simple Page
     */
 
     get_header();
@@ -20,8 +20,13 @@
         </header>
 
         <div class="site-main__content">
-            <div class="about">
-                Страница находится в разработке
+            <div class="site-main__content-wrapper">
+                <?php
+                    if (have_posts()) {
+                        the_post();
+                        the_content(); 
+                    }
+                ?>
             </div>
         </div>
     </main>

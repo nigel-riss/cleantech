@@ -4,13 +4,15 @@
 
 <div class="wrapper">
     <div class="serv-buttons">
-        <a class="button button--clean" href="#">Печать</a>
-        <a class="button button--clean button--ml-30" href="#">Задать вопрос</a>
+        <a class="button button--clean" href="#" onclick="printPage()">Печать</a>
+        <a class="button button--clean button--ml-30" href="<?php echo esc_url(home_url('/')); ?>ask">Задать вопрос</a>
     </div>
 
     <main class="site-main">
         <header class="site-main__header">
-            <div class="site-main__breadcumbs">Главная / <span>Новости</span></div>
+            <div class="site-main__breadcumbs">
+                Главная / <span>Новости</span>
+            </div>
         </header>
 
         <div class="site-main__content">
@@ -37,8 +39,12 @@
 
                         <div class="news-page-item__wrapper">
                             <header class="news-page-item__header">
-                                <div class="news-page-item__day">07</div>
-                                <div class="news-page-item__date">февраля, 2017</div>
+                                <div class="news-page-item__day">
+                                    <?php echo get_the_date('j'); ?>
+                                </div>
+                                <div class="news-page-item__date">
+                                    <?php echo get_the_date('F, Y'); ?>
+                                </div>
                                 <h3 class="news-page-item__title">
                                     <?php the_title(); ?>
                                 </h3>

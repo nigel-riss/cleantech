@@ -14,9 +14,12 @@
         margin: 40px 0;
         margin-left: 20px;
         margin-top: 109px;
+        margin-bottom: -120px;
 
         // visual
         background-color: #ffffff;
+        // border: 1px solid red;
+        box-shadow: 0 0 20px rgba(#212121, 0.25);
     }
 
     &__title {

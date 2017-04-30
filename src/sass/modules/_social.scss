@@ -1,10 +1,16 @@
 .social {
+    // box model
+    margin-bottom: 20px;
     // typography
     font-size: 0;
 
     a {
         // box model
         margin-right: 10px;
+
+        // typography
+        color: #ffffff;
+        text-decoration: none;
         
         // visual
         transition: all 0.3s ease-out;

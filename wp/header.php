@@ -13,6 +13,26 @@
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 
     <?php wp_head(); ?>
+
+    <style>
+        .site-header {
+            background-image: url('<?php echo the_field('header-bg-s', 6); ?>');
+        }
+
+        .site-footer {
+            background-image: url('<?php echo the_field('footer-bg-s', 6); ?>');
+        }
+
+        @media(min-width: 700px) {
+            .site-header {
+                background-image: url('<?php echo the_field('header-bg', 6); ?>');
+            }
+
+            .site-footer {
+                background-image: url('<?php echo the_field('footer-bg', 6); ?>');
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -28,7 +48,7 @@
                 <div class="language"></div>
 
                 <div class="search">
-                    <form class="search__form" method="get" action="<?php esc_url(home_url('/')); ?>">
+                    <form class="search__form" method="get" action="<?php echo esc_url(home_url('/')); ?>">
                         <input class="search__input" name="s" type="text" placeholder="Поиск">
                         <button class="search__button" type="submit">
                             Найти <div class="icon-search"></div>
@@ -46,13 +66,17 @@
 
             <div class="site-header__contacts">
                 <div class="header-contact">
-                    <div class="header-contact__phone"><a href="tel:84012390043">8 (4012) 39 00 43</a></div>
+                    <div class="header-contact__phone"><a href="tel:+74012390043">+7 (4012) 39-00-43</a></div>
                     <div class="header-contact__email"><a href="mailto:info@baltcleantech.com">info@baltcleantech.com</a></div>
                 </div>
                 <div class="header-contact">
                     <div class="header-contact__title">Мы в соцсетях</div>
-                    <div class="social"><a class="icon-twitter" href="">Twitter</a><a class="icon-facebook" href="">Facebook</a><a class="icon-linkedin"
-                            href="">LinkedIn</a><a class="icon-gplus" href="">Google+</a></div>
+                    <div class="social">
+                        <a class="icon-twitter" href="">Twitter</a>
+                        <a class="icon-facebook" href="">Facebook</a>
+                        <a class="icon-linkedin" href="">LinkedIn</a>
+                        <a class="icon-gplus" href="">Google+</a>
+                    </div>
                 </div>
             </div>
         </div>
