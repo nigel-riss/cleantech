@@ -1,0 +1,136 @@
+.widget-news {
+    // box model
+    padding-bottom: 40px;
+
+    &__title {
+        // box model
+        padding-bottom: 10px;
+
+        // typography
+        color: $mainTitle;
+        font-size: 1rem;
+
+        // visual
+        border-bottom: 1px solid $mainBlue;
+    }
+
+    .screen-reader-text {
+        // positioning
+        position: absolute;
+        z-index: -1;
+
+        // box model
+        // display: none;
+        padding-top: 5px;
+        
+        // typography
+        color: #cccccc;
+        font-size: 0.875rem;
+    }
+
+    form[role="search"] {
+        // positioning
+        position: relative;
+
+        // box model
+        padding-bottom: 5px;
+
+        // visual
+        border-bottom: 1px solid $mainBlue;
+    }
+
+    input[name="s"] {
+        // box model
+        padding: 5px;
+        width: 165px;
+
+        // visual
+        border: none;
+        background-color: transparent;
+        transition: all 0.3s ease-out;
+
+        &:focus {
+            // visual
+            background-color: #ffffff;
+            background-color: $lightBlue;
+            outline: none;
+        }
+    }
+
+    input[id="searchsubmit"] {
+        // positioning
+        position: relative;
+
+        // typography
+        // font-size: 0;
+        color: $grey;
+        // font-weight: 700;
+        // text-transform: uppercase;
+
+        // box model
+        padding: 4px 6px;
+
+        // visual
+        border: 1px solid $grey;
+        background-color: transparent;
+        cursor: pointer;
+        transition: all 0.3s ease-out;
+
+        &:hover {
+            // typography
+            color: #ffffff;
+
+            // visual
+            background-color: $mainBlue;
+            border: 1px solid $mainBlue;
+        }
+
+        // &::after {
+        //     content: "";
+
+        //     // positioning
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+
+        //     // box model
+        //     height: 20px;
+        //     width: 20px;
+        //     border: 1px solid red;
+        // }
+    }
+    
+    ul {
+        // box model
+        margin: 0;
+        padding: 0;
+
+        // visual
+        list-style: none;
+    }
+
+    li {
+        // box model
+        padding-bottom: 5px;
+
+        // typography
+        color: $grey;
+        font-size: 0.875rem;
+        text-align: right;
+        line-height: 1.4;
+
+        @include clearfix;
+    }
+
+    a {
+        // box model
+        float: left;
+        width: 80%;
+        padding-top: 0;
+
+        // typography
+        color: $grey;
+        font-size: 0.875rem;
+        text-align: left;
+    }
+}

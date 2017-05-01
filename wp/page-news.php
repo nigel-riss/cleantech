@@ -72,11 +72,14 @@
 
     <aside class="side-nav">
         <h2 class="side-nav__title">
-        
+            Новости
         </h2>
-        <ul class="side-nav__menu">
 
-        </ul>
+        <?php 
+            if(is_active_sidebar('sidebar')) {
+                dynamic_sidebar('sidebar');
+            }
+        ?>
     </aside>
 </div>
 

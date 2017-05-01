@@ -79,11 +79,14 @@
 
     <aside class="side-nav">
         <h2 class="side-nav__title">
-        
+            О компании
         </h2>
-        <ul class="side-nav__menu">
 
-        </ul>
+        <?php 
+            if(is_active_sidebar('simple-sidebar')) {
+                dynamic_sidebar('simple-sidebar');
+            }
+        ?>
     </aside>
 </div>
 

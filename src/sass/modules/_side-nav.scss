@@ -1,4 +1,8 @@
 .side-nav {
+    // positioning
+    position: relative;
+    z-index: 2;
+
     // box model
     display: none;
     padding: 25px;
@@ -35,6 +39,7 @@
 
         // visual
         border-bottom: 1px solid $mainBlue;
+        border-bottom: 1px solid #cccccc;
     }
 
     &__menu {

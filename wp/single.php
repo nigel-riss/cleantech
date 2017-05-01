@@ -69,13 +69,15 @@
     </main>
 
     <aside class="side-nav">
-        <h2 class="side-nav__title">О Компании</h2>
-        <ul class="side-nav__menu">
-            <li><a href="#">Общая информация</a></li>
-            <li><a href="#">Наша команда</a></li>
-            <li><a href="#">Вакансии</a></li>
-            <li><a href="#">Контакты</a></li>
-        </ul>
+        <h2 class="side-nav__title">
+            Новости
+        </h2>
+
+        <?php 
+            if(is_active_sidebar('sidebar')) {
+                dynamic_sidebar('sidebar');
+            }
+        ?>
     </aside>
 </div>
 

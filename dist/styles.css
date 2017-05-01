@@ -938,8 +938,7 @@ body {
   .button--clean {
     color: #ffffff;
     border-color: transparent;
-    border-color: #ffffff;
-    background-color: rgba(0, 38, 53, 0.8); }
+    border-color: #ffffff; }
   .button--sand {
     border-color: #c8a165; }
     .button--sand:hover {
@@ -1408,6 +1407,8 @@ body {
       max-width: 1700px; } }
 
 .side-nav {
+  position: relative;
+  z-index: 2;
   display: none;
   padding: 25px; }
   @media (min-width: 1200px) {
@@ -1429,7 +1430,8 @@ body {
     margin-bottom: 40px;
     font-weight: 400;
     text-transform: uppercase;
-    border-bottom: 1px solid #00baff; }
+    border-bottom: 1px solid #00baff;
+    border-bottom: 1px solid #cccccc; }
   .side-nav__menu {
     margin: 0;
     padding: 0;
@@ -1793,3 +1795,65 @@ body {
       font-size: 1.125em; }
     .search-item__more:hover {
       color: #00baff; }
+
+.widget-news {
+  padding-bottom: 40px; }
+  .widget-news__title {
+    padding-bottom: 10px;
+    color: #333333;
+    font-size: 1rem;
+    border-bottom: 1px solid #00baff; }
+  .widget-news .screen-reader-text {
+    position: absolute;
+    z-index: -1;
+    padding-top: 5px;
+    color: #cccccc;
+    font-size: 0.875rem; }
+  .widget-news form[role="search"] {
+    position: relative;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #00baff; }
+  .widget-news input[name="s"] {
+    padding: 5px;
+    width: 165px;
+    border: none;
+    background-color: transparent;
+    transition: all 0.3s ease-out; }
+    .widget-news input[name="s"]:focus {
+      background-color: #ffffff;
+      background-color: #d0ebf5;
+      outline: none; }
+  .widget-news input[id="searchsubmit"] {
+    position: relative;
+    color: #666666;
+    padding: 4px 6px;
+    border: 1px solid #666666;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease-out; }
+    .widget-news input[id="searchsubmit"]:hover {
+      color: #ffffff;
+      background-color: #00baff;
+      border: 1px solid #00baff; }
+  .widget-news ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+  .widget-news li {
+    padding-bottom: 5px;
+    color: #666666;
+    font-size: 0.875rem;
+    text-align: right;
+    line-height: 1.4; }
+    .widget-news li:after {
+      content: "";
+      display: table;
+      width: 100%;
+      clear: both; }
+  .widget-news a {
+    float: left;
+    width: 80%;
+    padding-top: 0;
+    color: #666666;
+    font-size: 0.875rem;
+    text-align: left; }
