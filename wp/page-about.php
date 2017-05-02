@@ -3,6 +3,9 @@
         Template Name: About Page
     */
 
+    // corner image
+    $corner_image = get_field("corner-image");
+
     get_header();
 ?>
 
@@ -18,7 +21,7 @@
         </header>
 
         <div class="site-main__content">
-            <div class="about">
+            <div class="about" style="background-image: url(<?php echo $corner_image; ?>);">
                 <div class="about__wrapper">
                     <h2 class="about__title">Чистые Технологии Балтики</h2>
                     

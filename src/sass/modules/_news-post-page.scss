@@ -15,10 +15,28 @@
     }
 
     &__social {
+        .social {
+            // box model
+            display: inline-block;
+        }
+
         a {
             // typography
             color: $mainBlue;
             text-decoration: none;
+
+            // visual
+            transition: all 0.3s ease-out;
+
+            &::before {
+                // typography
+                font-size: 1.25rem;
+            }
+
+            &:hover {
+                // typography
+                color: $mainCopy;
+            }
         }
 
         @include atDesktop {
@@ -36,7 +54,7 @@
         // box model
         display: none;
         float: right;
-        margin-top: -1.25rem;
+
 
         @include atDesktop {
             // box model
@@ -47,6 +65,11 @@
             // typography
             color: $mainSand;
             font-size: 1.25rem;
+            
+            &::before {
+                // typography
+                font-size: 1.5rem;
+            }
         }
     }
 

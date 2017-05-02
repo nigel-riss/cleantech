@@ -5,13 +5,19 @@
 
     get_header();
 
-    // vars
+    // contact info
     $address        = get_field('address');
     $email          = get_field('email');
     $phone_link     = get_field('phone-link');
     $phone_view     = get_field('phone-view');
     $schedule       = get_field('schedule');
     $map_link       = get_field('map-link');
+
+    // social
+    $twitter_url        = get_field('twitter-url');
+    $facebook_url       = get_field('facebook-url');
+    $linkedin_url       = get_field('linkedin-url');
+    $google_plus_url    = get_field('goolge-plus-url');
 ?>
 
 <div class="wrapper">
@@ -41,7 +47,7 @@
                         </p>
                     </div>
                     <div class="contact-info">
-                        <h3 class="contact-info__title">Электропочта</h3>
+                        <h3 class="contact-info__title">E-mail</h3>
                         <p class="contact-info__text">
                             <a href="mailto: <?php echo $email; ?>">
                                 <?php echo $email; ?>

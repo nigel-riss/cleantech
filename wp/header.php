@@ -66,16 +66,21 @@
 
             <div class="site-header__contacts">
                 <div class="header-contact">
-                    <div class="header-contact__phone"><a href="tel:+74012390043">+7 (4012) 39-00-43</a></div>
-                    <div class="header-contact__email"><a href="mailto:info@baltcleantech.com">info@baltcleantech.com</a></div>
+                    <div class="header-contact__phone">
+                        <a href="tel:<?php echo the_field("phone-link", 36); ?>"><?php echo the_field("phone-view", 36); ?></a>
+                    </div>
+
+                    <div class="header-contact__email">
+                        <a href="mailto: <?php echo the_field("email", 36); ?>"><?php echo the_field("email", 36); ?></a>
+                    </div>
                 </div>
                 <div class="header-contact">
                     <div class="header-contact__title">Мы в соцсетях</div>
                     <div class="social">
-                        <a class="icon-twitter" href="">Twitter</a>
-                        <a class="icon-facebook" href="">Facebook</a>
-                        <a class="icon-linkedin" href="">LinkedIn</a>
-                        <a class="icon-gplus" href="">Google+</a>
+                        <a class="icon-twitter" href="<?php echo the_field("twitter-url", 36); ?>">Twitter</a>
+                        <a class="icon-facebook" href="<?php echo the_field("facebook-url", 36); ?>">Facebook</a>
+                        <a class="icon-linkedin" href="<?php echo the_field("linkedin-url", 36); ?>">LinkedIn</a>
+                        <a class="icon-gplus" href="<?php echo the_field("google-plus-url", 36); ?>">Google+</a>
                     </div>
                 </div>
             </div>
