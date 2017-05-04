@@ -11,6 +11,13 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,700&amp;amp;subset=cyrillic">
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="<?php bloginfo('stylesheet_directory'); ?>/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?php bloginfo('stylesheet_directory'); ?>/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php bloginfo('stylesheet_directory'); ?>/favicon-16x16.png">
+    <link rel="manifest" href="<?php bloginfo('stylesheet_directory'); ?>/manifest.json">
+    <link rel="mask-icon" href="<?php bloginfo('stylesheet_directory'); ?>/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
 
     <?php wp_head(); ?>
 
@@ -90,7 +97,7 @@
         <nav class="main-nav main-nav--main">
             <div class="main-nav__home">
                 <a href="<?php echo esc_url(home_url('/')); ?>">
-                    <div class="icon-home"></div>
+                    <div class="icon-home" style="font-size: 1.25rem; margin-top: -3px;"></div>
                 </a>
             </div>
 

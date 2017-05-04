@@ -473,6 +473,13 @@ body {
     body {
       margin: 0 0 300px; } }
 
+a {
+  color: #00baff;
+  text-decoration: none;
+  transition: all 0.3s ease-out; }
+  a:hover {
+    text-decoration: underline; }
+
 .site-header {
   position: relative;
   padding: 25px;
@@ -934,6 +941,7 @@ body {
     margin-left: 30px; }
   .button:hover {
     color: #ffffff;
+    text-decoration: none;
     background-color: #00baff; }
   .button--clean {
     color: #ffffff;
@@ -1361,6 +1369,12 @@ body {
         color: #ffffff; } }
     .site-main__breadcumbs span {
       color: #00baff; }
+      .site-main__breadcumbs span a {
+        color: #00baff;
+        text-decoration: none; }
+    .site-main__breadcumbs a {
+      color: #ffffff;
+      text-decoration: none; }
   .site-main__content {
     padding: 30px 25px;
     box-shadow: 0 0 20px rgba(33, 33, 33, 0.25);
@@ -1430,6 +1444,7 @@ body {
     margin-bottom: 40px;
     font-weight: 400;
     text-transform: uppercase;
+    overflow: hidden;
     border-bottom: 1px solid #00baff;
     border-bottom: 1px solid #cccccc; }
   .side-nav__menu {
@@ -1444,6 +1459,8 @@ body {
     transition: all 0.1s ease-out; }
     .side-nav a:hover {
       color: #00baff; }
+  .side-nav img {
+    width: 100%; }
 
 .about {
   margin: 0 -25px; }
@@ -1865,3 +1882,44 @@ body {
     color: #666666;
     font-size: 0.875rem;
     text-align: left; }
+
+.question-form {
+  max-width: 800px;
+  margin: 0 auto; }
+  .question-form__fieldset {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none; }
+  .question-form__input {
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+    font-family: "Open sans", sans-serif;
+    font-size: 1rem;
+    border: 1px solid #00baff;
+    transition: all 0.3s ease-out; }
+    .question-form__input:focus {
+      background-color: rgba(0, 186, 255, 0.2);
+      outline: none; }
+  .question-form__textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-family: "Open sans", sans-serif;
+    font-size: 1rem;
+    border: 1px solid #00baff;
+    transition: all 0.3s ease-out;
+    resize: vertical; }
+    .question-form__textarea:focus {
+      background-color: rgba(0, 186, 255, 0.1);
+      outline: none; }
+  .question-form__submit {
+    background-color: transparent;
+    cursor: pointer; }
+  .question-form__policy {
+    font-size: 0.9rem;
+    text-align: right; }

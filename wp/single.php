@@ -10,7 +10,9 @@
 
     <main class="site-main">
         <header class="site-main__header">
-            <div class="site-main__breadcumbs">Главная / <span>Новости</span></div>
+            <div class="site-main__breadcumbs">
+                <a href="<?php echo esc_url(home_url('/')); ?>">Главная</a> / <span><a href="<?php echo esc_url(home_url('/')); ?>news">Новости</a></span>
+            </div>
         </header>
 
         <div class="site-main__content">

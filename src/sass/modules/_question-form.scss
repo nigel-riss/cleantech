@@ -1,0 +1,82 @@
+.question-form {
+    // box model
+    max-width: 800px;
+    margin: 0 auto;
+    // border: 1px solid red;
+
+    // typography
+    // text-align: right;
+
+    &__fieldset {
+        // box model
+        display: block;
+        margin: 0;
+        padding: 0;
+        
+        // visual
+        border: none;
+        // border: 1px solid red;
+    }
+
+    &__input {
+        // box model
+        display: block;
+        width: 100%;
+        height: 50px;
+        
+        margin-bottom: 20px;
+        padding: 0 10px;
+
+        // typography
+        font-family: $mainFont;
+        font-size: 1rem;
+
+        // visual
+        border: 1px solid $mainBlue;
+        transition: all 0.3s ease-out;
+
+        &:focus {
+            // visual
+            background-color: rgba($mainBlue, 0.2);
+            outline: none;
+        }
+    }
+
+    &__textarea {
+        // box model
+        display: block;
+        width: 100%;
+
+        margin-bottom: 20px;
+        padding: 10px;
+
+        // typography
+        font-family: $mainFont;
+        font-size: 1rem;
+
+        // visual
+        border: 1px solid $mainBlue;
+        transition: all 0.3s ease-out;
+
+        // other
+        resize: vertical;
+
+        &:focus {
+            // visual
+            background-color: rgba($mainBlue, 0.1);
+            outline: none;
+        }
+    }
+
+    &__submit {
+        // visual
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    &__policy {
+        // typography
+        font-size: 0.9rem;
+        text-align: right;
+    }
+}

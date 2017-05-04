@@ -15,7 +15,7 @@
     <main class="site-main">
         <header class="site-main__header">
             <div class="site-main__breadcumbs">
-                Главная / <span><?php the_title(); ?></span>
+                <a href="<?php echo esc_url(home_url('/')); ?>">Главная</a> / <span><?php the_title(); ?></span>
             </div>
         </header>
 
@@ -33,7 +33,7 @@
 
     <aside class="side-nav">
         <h2 class="side-nav__title">
-            О компании
+            <?php the_title(); ?>
         </h2>
 
         <?php 

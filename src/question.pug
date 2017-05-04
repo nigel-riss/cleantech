@@ -1,0 +1,33 @@
+include includes/_header.pug
+
+.wrapper
+    .serv-buttons
+        a(href="#").button.button--clean Печать
+        a(href="#").button.button--clean.button--ml-30 Задать вопрос
+
+    main.site-main
+        header.site-main__header
+            .site-main__breadcumbs Главная / #[span О Компании]
+
+        .site-main__content
+            <form method="POST" action="https://formspree.io/mr.kurenkov@gmail.com" class="question-form">
+                <fieldset class="question-form__fieldset">
+                    <input class="question-form__input" type="text" name="name" placeholder="Ваше Имя">
+                    <input class="question-form__input" type="email" name="email" placeholder="Email">
+                    <input class="question-form__input" type="tel" name="phone" placeholder="Телефон">
+                    <textarea class="question-form__textarea" name="order" id="" cols="30" rows="5" placeholder="Вопрос"></textarea>
+                    <input class="question-form__submit button" type="submit" value="Отправить вопрос"></input>
+                    <p class="question-form__policy">Нажимая «отправить вопрос» вы соглашаетесь с <a href="<?php echo esc_url(home_url('/')); ?>policy">политикой конфиденциальности</a></p>
+                </fieldset>
+            </form>
+                
+                    
+    aside.side-nav
+        h2.side-nav__title Контакты
+        ul.side-nav__menu
+            li: a(href="#") Общая информация
+            li: a(href="#") Наша команда
+            li: a(href="#") Контакты
+
+
+include includes/_footer.pug

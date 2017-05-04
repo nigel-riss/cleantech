@@ -35,3 +35,17 @@ body {
 
     // }
 }
+
+a {
+    // typography
+    color: $mainBlue;
+    text-decoration: none;
+
+    // visual
+    transition: all 0.3s ease-out;
+
+    &:hover {
+        // typography
+        text-decoration: underline;
+    }
+}

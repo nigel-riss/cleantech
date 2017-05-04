@@ -11,7 +11,7 @@
     <main class="site-main">
         <header class="site-main__header">
             <div class="site-main__breadcumbs">
-                Главная / <span>Архив</span>
+                <a href="<?php echo esc_url(home_url('/')); ?>">Главная</a> / <span>Архив</span>
             </div>
         </header>
 

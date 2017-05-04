@@ -163,7 +163,7 @@
             <div class="services__projects">
                 <p class="services__subtitle">Наши проекты</p>
                 <p class="services__text">Перечень текущих и реализованных проектов нашей компанией</p>
-                <a class="button button--sand" href="#">Наши проекты</a>
+                <a class="button button--sand" href="<?php echo esc_url(home_url('/')); ?>projects">Наши проекты</a>
             </div>
         </section>
     </div>

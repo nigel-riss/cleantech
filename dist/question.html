@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,700&amp;amp;subset=cyrillic">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__wrapper">
+        <div class="menu-icon">
+          <div class="menu-icon__middle"></div>
+        </div>
+        <div class="search-n-lang">
+          <div class="search">
+            <form class="search__form">
+              <input class="search__input" type="text" placeholder="Поиск">
+              <button class="search__button" type="submit">Найти
+                <div class="icon-search"></div>
+              </button>
+            </form>
+          </div>
+          <div class="language"></div>
+        </div>
+        <div class="logo"><img src="./img/logo.png"></div>
+        <div class="site-header__contacts"> 
+          <div class="header-contact">
+            <div class="header-contact__phone"><a href="tel:84012390043">8 (4012) 39 00 43</a></div>
+            <div class="header-contact__email"><a href="mailto:info@baltcleantech.com">info@baltcleantech.com</a></div>
+          </div>
+          <div class="header-contact">
+            <div class="header-contact__title">Мы в соцсетях</div>
+            <div class="social"><a class="icon-twitter" href="">Twitter</a><a class="icon-facebook" href="">Facebook</a><a class="icon-linkedin" href="">LinkedIn</a><a class="icon-gplus" href="">Google+</a></div>
+          </div>
+        </div>
+      </div>
+      <nav class="main-nav main-nav--main">
+        <div class="main-nav__home"><a href="#">
+            <div class="icon-home"></div></a></div>
+        <ul class="main-nav__menu">
+          <li><a href="about.html">О компании</a></li>
+          <li><a href="news.html">Новости</a></li>
+          <li><a href="#">Услуги</a></li>
+          <li><a href="#">Проекты</a></li>
+          <li><a href="#">Партнеры</a></li>
+          <li><a href="#">Вакансии</a></li>
+          <li><a href="#">Отзывы</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </header>
+  </body>
+</html>
+<div class="wrapper">
+  <div class="serv-buttons"><a class="button button--clean" href="#">Печать</a><a class="button button--clean button--ml-30" href="#">Задать вопрос</a></div>
+  <main class="site-main">
+    <header class="site-main__header">
+      <div class="site-main__breadcumbs">Главная / <span>О Компании</span></div>
+    </header>
+    <div class="site-main__content"><form method="POST" action="https://formspree.io/mr.kurenkov@gmail.com" class="question-form">
+<fieldset class="question-form__fieldset">
+<input class="question-form__input" type="text" name="name" placeholder="Ваше Имя">
+<input class="question-form__input" type="email" name="email" placeholder="Email">
+<input class="question-form__input" type="tel" name="phone" placeholder="Телефон">
+<textarea class="question-form__textarea" name="order" id="" cols="30" rows="5" placeholder="Вопрос"></textarea>
+<input class="question-form__submit button" type="submit" value="Отправить вопрос"></input>
+<p class="question-form__policy">Нажимая «отправить вопрос» вы соглашаетесь с <a href="<?php echo esc_url(home_url('/')); ?>policy">политикой конфиденциальности</a></p>
+</fieldset>
+</form>
+    </div>
+  </main>
+  <aside class="side-nav">
+    <h2 class="side-nav__title">Контакты</h2>
+    <ul class="side-nav__menu">
+      <li><a href="#">Общая информация</a></li>
+      <li><a href="#">Наша команда</a></li>
+      <li><a href="#">Контакты</a></li>
+    </ul>
+  </aside>
+</div>
+<footer class="site-footer">
+  <div class="site-footer__wrapper">
+    <div class="contact-block">
+      <h3 class="contact-block__title">Контакты</h3>
+      <div class="contact">
+        <div class="contact__name">Телефон:</div>
+        <div class="contact__value"><a href="tel:+79114571223">+7 911 457-12-23</a></div>
+      </div>
+      <div class="contact">
+        <div class="contact__name">Email:</div>
+        <div class="contact__value"><a href="mailto: somemail@gmail.com">somemail@gmail.com</a></div>
+      </div>
+    </div>
+    <div class="copyrights">&copy;  <span class="copyrights--blue">Чистые Технологии</span> 2017. </div>
+    <script>function printPage() {window.print()};</script>
+  </div>
+</footer>
