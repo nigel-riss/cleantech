@@ -32,6 +32,7 @@
     "webpack-stream": "^3.2.0"
   },
   "dependencies": {
+    "jquery": "^3.2.1",
     "normalize.css": "^6.0.0"
   }
 }

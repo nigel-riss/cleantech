@@ -2,22 +2,32 @@
     // positioning
     position: absolute;
     top: 0;
-    left: 0;
-    z-index: 2;
+    left: -100%;
+    z-index: 3;
 
     // box model
     min-height: 100vh;
     padding: 100px 0;
-    visibility: hidden;
 
     // visual
     background-color: rgba($menuBlue, 0.9);
     border-right: 3px solid $mainBlue;
+    transition: all 0.3s ease-out;
+    opacity: 0;
+    visibility: hidden;
+
+    &--shown {
+        // positioning
+        left: 0;
+
+        // visual
+        opacity: 1;
+        visibility: visible;
+    }
 
     @include atTabletsLandscape {
         // positioning
         bottom: 30px;
-        // bottom: 100px;
         right: 0;
         top: auto;
         left: auto;
@@ -25,11 +35,8 @@
         // box model
         padding: 10px 20px;
         padding-left: 0;
-        // padding-right: 60px;
         width: 100%;
         min-height: auto;
-        visibility: visible;
-        // border: 1px solid red;
 
         // typography
         text-align: right;
@@ -37,6 +44,8 @@
         // visual
         background-color: rgba($menuBlue, 0.7);
         border-right: none;
+        opacity: 1;
+        visibility: visible;
     }
 
     @include atDesktop {
@@ -74,11 +83,12 @@
 
     &__home {
         // box model
-        display: inline-block;
+        display: none;
         vertical-align: top;
 
-        div {
+        @include atTabletsLandscape {
             // box model
+            display: inline-block;
         }
     }
 
