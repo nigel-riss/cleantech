@@ -20,11 +20,14 @@ gulp.task('watch', function() {
     });
 
     // styles
-    watch('./src/**/*.scss', function() {
+    watch('./src/sass/**/*.scss', function() {
         gulp.start('cssInject')
     });
 
     // scripts
+    watch('./src/js/**', function() {
+        gulp.start('scriptsRefresh');
+    })
 
     // wordpress
     watch('./wp/*.php', function() {
@@ -34,6 +37,10 @@ gulp.task('watch', function() {
     watch('./dist/styles.css', function() {
         gulp.start('copyCSS');
     });
+});
+
+gulp.task('scriptsRefresh', ['scripts'], function() {
+    browserSync.reload();
 });
 
 gulp.task('cssInject', ['styles'], function() {
