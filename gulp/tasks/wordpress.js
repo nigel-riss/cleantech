@@ -16,3 +16,10 @@ gulp.task('copyCSS', function() {
 gulp.task('copyJS', function() {
     // 
 });
+
+gulp.task('copyPHPEn', function() {
+    gulp.src('./wp_en/*.php')
+        .pipe(gulp.dest(
+            'C:/xampp/htdocs/cleantech-en/wp-content/themes/cleantech/'
+        ));
+})

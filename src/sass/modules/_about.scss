@@ -57,7 +57,8 @@
         text-transform: uppercase;
     }
 
-    &__text {
+    &__text, 
+    p {
         // typography
         color: $mainCopy;
         font-size: 1rem;

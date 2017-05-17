@@ -1503,7 +1503,8 @@ a {
   .about__title {
     position: relative;
     text-transform: uppercase; }
-  .about__text {
+  .about__text,
+  .about p {
     color: #333333;
     font-size: 1rem;
     line-height: 1.5;

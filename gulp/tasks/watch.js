@@ -37,6 +37,10 @@ gulp.task('watch', function() {
     watch('./dist/styles.css', function() {
         gulp.start('copyCSS');
     });
+
+    watch('./wp_en/*.php', function() {
+        gulp.start('copyPHPEn');
+    });
 });
 
 gulp.task('scriptsRefresh', ['scripts'], function() {
