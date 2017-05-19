@@ -34,7 +34,7 @@
                         }
                     ?>
 
-                    <p class="about__signature"><strong>Директор: <em>Андрей Суленко</em></strong></p>
+                    <!--<p class="about__signature"><strong>Директор: <em>Андрей Суленко</em></strong></p>-->
                 </div>
             </div>
         </div>
