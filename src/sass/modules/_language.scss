@@ -1,3 +1,47 @@
 .language {
-    
+    // positioning
+    position: absolute;
+    top: 0;
+
+    @include atTabletsLandscape {
+        // positioning
+        right: 0;
+        top: -8px;
+    }
+
+    @include atDesktop {
+        // positioning
+        top: -40px;
+        right: 0;
+    }
+
+    // typography
+    color: #ffffff;
+    font-size: 0.8rem;
+
+    &__item {
+        // box model
+        display: inline-block;
+        padding: 5px;
+
+        // typography
+        text-transform: uppercase;
+
+        a {
+            // typography
+            color: #ffffff;
+
+            &:hover {
+                // typography
+                color: $mainBlue;
+                text-decoration: none;
+            }
+        }
+
+        &--current {
+            // visual
+            border-bottom: 1px solid #ffffff;
+            opacity: 0.5;
+        }
+    }
 }

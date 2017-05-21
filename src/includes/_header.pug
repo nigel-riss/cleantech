@@ -14,12 +14,16 @@ html
                 .menu-icon: .menu-icon__middle
                 
                 .search-n-lang
+                    .language
+                        .language__item: a(href="#") eng
+                        span |
+                        .language__item.language__item--current: a(href="#") рус
+                        
                     .search
                         form.search__form
                             input(type="text", placeholder="Поиск").search__input
                             button(type="submit").search__button Найти
                                 .icon-search
-                    .language
 
                 .logo: img(src="./img/logo.png")
 

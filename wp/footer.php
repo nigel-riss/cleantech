@@ -48,6 +48,7 @@
 <?php wp_footer(); ?>
 
 <script>function printPage() {window.print()};</script>
+<script src="<?php bloginfo('stylesheet_directory');?>/app.js"></script>
 
 </body>
 

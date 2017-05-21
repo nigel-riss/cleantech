@@ -71,8 +71,13 @@
 
         a {
             // typography
-            color: #ffffff;
+            color: $mainTitle;
             text-decoration: none;
+
+            @include atDesktop {
+                // typography
+                color: #ffffff;
+            }
         }
     }
 

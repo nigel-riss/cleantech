@@ -51,9 +51,6 @@
             </div>
 
             <div class="search-n-lang">
-
-                <div class="language"></div>
-
                 <div class="search">
                     <form class="search__form" method="get" action="<?php echo esc_url(home_url('/')); ?>">
                         <input class="search__input" name="s" type="text" placeholder="Поиск">
@@ -63,6 +60,15 @@
                     </form>
                 </div>
 
+                <div class="language">
+                    <div class="language__item">
+                        <a href="http://en.baltcleantech.com/">eng</a>
+                    </div>
+                    <span>|</span>
+                    <div class="language__item  language__item--current">
+                        <a href="http://baltcleantech.com/">рус</a>
+                    </div>
+                </div>
             </div>
 
             <div class="logo">

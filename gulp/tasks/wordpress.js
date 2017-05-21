@@ -10,11 +10,14 @@ gulp.task('copyPHP', function() {
 gulp.task('copyCSS', function() {
     gulp.src('./dist/styles.css')
         .pipe(rename('style.css'))
-        .pipe(gulp.dest('C:/xampp/htdocs/cleantech/wp-content/themes/cleantech/'));
+        .pipe(gulp.dest('C:/xampp/htdocs/cleantech/wp-content/themes/cleantech/'))
+        .pipe(gulp.dest('C:/xampp/htdocs/cleantech-en/wp-content/themes/cleantech/'));
 });
 
 gulp.task('copyJS', function() {
-    // 
+    gulp.src('./dist/app.js')
+        .pipe(gulp.dest('C:/xampp/htdocs/cleantech/wp-content/themes/cleantech/'))
+        .pipe(gulp.dest('C:/xampp/htdocs/cleantech-en/wp-content/themes/cleantech/'));
 });
 
 gulp.task('copyPHPEn', function() {

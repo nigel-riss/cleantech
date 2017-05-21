@@ -1,7 +1,7 @@
 .search {
     // box model
     display: none;
-    float: right;
+    // float: right;
 
     // typography
     font-size: 0;
@@ -9,6 +9,12 @@
     @include atTabletsLandscape {
         // box model
         display: block;
+        padding-top: 58px;
+    }
+
+    @include atDesktop {
+        // box model
+        padding-top: 18px;
     }
 
     &__form {
