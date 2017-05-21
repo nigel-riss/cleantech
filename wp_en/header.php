@@ -67,7 +67,7 @@
                     </div>
                     <span>|</span>
                     <div class="language__item">
-                        <a href="http://baltcleantech.com/">рус</a>
+                        <a href="http://ru.baltcleantech.com/">рус</a>
                     </div>
                 </div>
 
