@@ -1237,13 +1237,20 @@ a {
 
 .language {
   position: absolute;
-  top: 0;
+  top: 192px;
+  right: 0;
+  width: 90px;
   color: #ffffff;
   font-size: 0.8rem; }
+  @media (min-width: 700px) {
+    .language {
+      top: -8px;
+      right: 70px; } }
   @media (min-width: 900px) {
     .language {
       right: 0;
-      top: -8px; } }
+      top: -8px;
+      width: auto; } }
   @media (min-width: 1200px) {
     .language {
       top: -40px;
