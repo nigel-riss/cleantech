@@ -1734,7 +1734,8 @@ a {
       min-height: 250px; } }
 
 .news-post-page__social .social {
-  display: inline-block; }
+  display: inline-block;
+  text-align: top; }
 
 .news-post-page__social a {
   color: #00baff;
@@ -1754,16 +1755,14 @@ a {
     margin-right: 440px; } }
 
 .news-post-page__print {
-  display: none;
-  float: right; }
+  display: none; }
   @media (min-width: 1200px) {
     .news-post-page__print {
-      display: block; } }
+      display: inline-block;
+      vertical-align: top; } }
   .news-post-page__print a {
     color: #c8a165;
     font-size: 1.25rem; }
-    .news-post-page__print a::before {
-      font-size: 1.5rem; }
 
 .news-post-page__title {
   color: #333333;

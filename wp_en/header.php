@@ -39,6 +39,44 @@
                 background-image: url('<?php echo the_field('footer-bg', 6); ?>');
             }
         }
+
+        .social a,
+        .language,
+        .language__item a,
+        .language__item--current,
+        .header-contact__title,
+        .header-contact__phone a,
+        .header-contact__email a,
+        .search__button
+        {
+            color: <?php echo the_field('text-color', 6); ?>;
+        }
+
+        .language__item--current {
+            border-bottom: 1px solid <?php echo the_field('text-color', 6); ?>;
+        }
+
+        .search__form {
+            border-bottom: 1px solid <?php echo the_field('text-color', 6); ?>;
+            border-bottom: 1px solid rgba(<?php echo the_field('text-color', 6); ?>, 0.8);
+        }
+
+        .search__input::-webkit-input-placeholder {
+            color: <?php echo the_field('text-color', 6); ?>;
+            color: rgba(<?php echo the_field('text-color', 6); ?>, 0.8);
+        }
+        .search__input:-moz-placeholder {
+            color: <?php echo the_field('text-color', 6); ?>;
+            color: rgba(<?php echo the_field('text-color', 6); ?>, 0.8);
+        }
+        .search__input::-moz-placeholder {
+            color: <?php echo the_field('text-color', 6); ?>;
+            color: rgba(<?php echo the_field('text-color', 6); ?>, 0.8);
+        }
+        .search__input:-ms-input-placeholder {
+            color: <?php echo the_field('text-color', 6); ?>;
+            color: rgba(<?php echo the_field('text-color', 6); ?>, 0.8);
+        }
     </style>
 </head>
 

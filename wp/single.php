@@ -38,10 +38,10 @@
                             <a class="icon-linkedin" href="http://www.linkedin.com/shareArticle?mini=true&url=<?php if(is_home()){echo home_url();}else{the_permalink();} ?>" title="Поделиться на LinkedIn" target="_blank">LinkedIn</a>
 
                             <a class="icon-gplus" href="https://plus.google.com/share?url=<?php esc_url(the_permalink()); ?>" title="Поделиться на Google+" target="_blank">Google+</a>
-                        </div>
 
-                        <div class="news-post-page__print">
-                            <a class="icon-print" href="#" onclick="printPage()"></a>
+                            <div class="news-post-page__print">
+                                <a class="icon-print" href="#" onclick="printPage()"></a>
+                            </div>
                         </div>
                     </div>
 
@@ -61,10 +61,6 @@
                 <div class="news-post-page__content">
                     <div class="news-post-page__text">
                         <?php the_content(); ?>
-                    </div>
-
-                    <div class="news-post-page__source">
-                        Источник: <a href="<?php echo $source_link; ?>"><?php echo $source_name; ?></a>
                     </div>
                 </div>
 
