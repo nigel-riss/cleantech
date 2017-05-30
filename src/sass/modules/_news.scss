@@ -2,6 +2,11 @@
     // box model
     padding: 25px 0;
 
+    @include atTabletsLandscape {
+        // box model
+        margin-bottom: 100px;
+    }
+
     @include atDesktop {
         // positioning
         position: relative;

@@ -19,7 +19,10 @@
     <link rel="mask-icon" href="<?php bloginfo('stylesheet_directory'); ?>/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="theme-color" content="#ffffff">
 
-    <?php wp_head(); ?>
+
+    <?php 
+        wp_head(); 
+    ?>
 
     <style>
         .site-header {
@@ -47,9 +50,13 @@
         .header-contact__title,
         .header-contact__phone a,
         .header-contact__email a,
-        .search__button
+        .search__button,
+        .contact-block__title,
+        .contact__value,
+        .contact__value a,
+        .copyrights
         {
-            color: <?php echo the_field('text-color', 6); ?>;
+            color: <?php echo the_field('text-color', 6); ?> !important;
         }
 
         .language__item--current {
@@ -77,6 +84,18 @@
             color: <?php echo the_field('text-color', 6); ?>;
             color: rgba(<?php echo the_field('text-color', 6); ?>, 0.8);
         }
+
+        .contact-block__title,
+        .contact__name,
+        .copyrights--blue
+        {
+            color: <?php echo the_field('secondary-text-color', 6); ?>;
+        }
+
+        .contact-block__title::after {
+            background-color:  <?php echo the_field('secondary-text-color', 6); ?>;
+        }
+
     </style>
 </head>
 

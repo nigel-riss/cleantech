@@ -84,6 +84,17 @@
             color: rgba(<?php echo the_field('text-color', 6); ?>, 0.8);
         }
 
+        .contact-block__title,
+        .contact__name,
+        .copyrights--blue
+        {
+            color: <?php echo the_field('secondary-text-color', 6); ?>;
+        }
+
+        .contact-block__title::after {
+            background-color:  <?php echo the_field('secondary-text-color', 6); ?>;
+        }
+
     </style>
 </head>
 

@@ -28,12 +28,14 @@ body {
 
     @include atTabletsPortrait {
         // box model
-        margin: 0 0 300px;
+        margin: 0;
+        margin-bottom: 300px;
     }
 
-    // @include atTabletsLandscape {
-
-    // }
+    @include atDesktop {
+        // box model
+        margin-bottom: 340px;
+    }
 }
 
 a {
