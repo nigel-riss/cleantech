@@ -1824,6 +1824,10 @@ a {
     text-decoration: none; }
     .news-post-page__text a:hover {
       text-decoration: underline; }
+  .news-post-page__text img {
+    display: block;
+    max-width: 100%;
+    margin: 20px auto; }
 
 .news-post-page__source {
   font-weight: 700;

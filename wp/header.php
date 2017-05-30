@@ -49,7 +49,11 @@
         .header-contact__title,
         .header-contact__phone a,
         .header-contact__email a,
-        .search__button
+        .search__button,
+        .contact-block__title,
+        .contact__value,
+        .contact__value a,
+        .copyrights
         {
             color: <?php echo the_field('text-color', 6); ?>;
         }

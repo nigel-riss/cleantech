@@ -182,6 +182,13 @@
                 text-decoration: underline;
             }
         }
+
+        img {
+            // box model
+            display: block;
+            max-width: 100%;
+            margin: 20px auto;
+        }
     }
 
     &__source {
