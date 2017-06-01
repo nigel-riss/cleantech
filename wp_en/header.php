@@ -54,10 +54,25 @@
         .contact-block__title,
         .contact__value,
         .contact__value a,
-        .copyrights
+        .copyrights,
+        .serv-buttons a,
+        .site-main__breadcumbs,
+        .site-main__breadcumbs a
         {
-            color: <?php echo the_field('text-color', 6); ?> !important;
+            color: <?php echo the_field('text-color', 6); ?>;
         }
+
+        .social a:hover,
+        .language__item a:hover,
+        .header-contact__phone a:hover,
+        .header-contact__email a:hover,
+        .search__button:hover,
+        .site-main__breadcumbs a:hover
+        {
+            color: <?php echo the_field('secondary-text-color', 6); ?>;
+        }
+
+
 
         .language__item--current {
             border-bottom: 1px solid <?php echo the_field('text-color', 6); ?>;
@@ -87,13 +102,29 @@
 
         .contact-block__title,
         .contact__name,
-        .copyrights--blue
+        .copyrights--blue,
+        .site-main__breadcumbs span
         {
             color: <?php echo the_field('secondary-text-color', 6); ?>;
         }
 
-        .contact-block__title::after {
+        .contact-block__title::after,
+        .serv-buttons a:hover,
+        .contact__value a:hover
+        {
             background-color:  <?php echo the_field('secondary-text-color', 6); ?>;
+        }
+
+        .menu-icon::before,
+        .menu-icon::after,
+        .menu-icon__middle
+        {
+            background-color:  <?php echo the_field('text-color', 6); ?>;
+        }
+
+        .serv-buttons a
+        {
+            border-color: <?php echo the_field('text-color', 6); ?>;
         }
 
     </style>
