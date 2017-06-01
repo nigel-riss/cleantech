@@ -57,7 +57,8 @@
         .copyrights,
         .serv-buttons a,
         .site-main__breadcumbs,
-        .site-main__breadcumbs a
+        .site-main__breadcumbs a,
+        .search__input
         {
             color: <?php echo the_field('text-color', 6); ?>;
         }

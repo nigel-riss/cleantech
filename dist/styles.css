@@ -1438,7 +1438,7 @@ a {
   .site-main__content {
     padding: 30px 25px;
     box-shadow: 0 0 20px rgba(33, 33, 33, 0.25);
-    background-image: linear-gradient(73deg, #ffffff 0, #ffffff 73%, #d0ebf5 73.25%, #d0ebf5 100%); }
+    background-image: linear-gradient(73deg, #ffffff 0, #ffffff 73%, #d0ebf5 73%, #d0ebf5 100%); }
     @media (min-width: 1200px) {
       .site-main__content {
         padding: 40px;
