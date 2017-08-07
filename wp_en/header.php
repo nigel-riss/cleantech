@@ -104,7 +104,8 @@
         .contact-block__title,
         .contact__name,
         .copyrights--blue,
-        .site-main__breadcumbs span
+        .site-main__breadcumbs span,
+        .site-main__breadcumbs span a
         {
             color: <?php echo the_field('secondary-text-color', 6); ?>;
         }
@@ -126,6 +127,11 @@
         .serv-buttons a
         {
             border-color: <?php echo the_field('text-color', 6); ?>;
+        }
+
+        *::selection {
+            color: white;
+            background-color: <?php echo the_field('secondary-text-color', 6); ?>;
         }
 
     </style>

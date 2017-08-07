@@ -4,7 +4,7 @@
 
 <div class="wrapper">
     <div class="serv-buttons">
-        <a class="button button--clean" href="#" onclick="printPage()">Pring</a>
+        <a class="button button--clean" href="#" onclick="printPage()">Print</a>
         <a class="button button--clean button--ml-30" href="<?php echo esc_url(home_url('/')); ?>ask">Ask a Question</a>
     </div>
 
@@ -55,7 +55,7 @@
                     } else {
                 ?>
 
-                    <p>По вашему запросу ничего не найдено.</p>
+                    <p>Nothing is found on your request.</p>
 
                 <?php
                     }

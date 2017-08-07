@@ -4,14 +4,14 @@
 
 <div class="wrapper">
     <div class="serv-buttons">
-        <a class="button button--clean" href="#" onclick="printPage()">Печать</a>
-        <a class="button button--clean button--ml-30" href="<?php echo esc_url(home_url('/')); ?>ask">Задать вопрос</a>
+        <a class="button button--clean" href="#" onclick="printPage()">Print</a>
+        <a class="button button--clean button--ml-30" href="<?php echo esc_url(home_url('/')); ?>ask">Ask a question</a>
     </div>
 
     <main class="site-main">
         <header class="site-main__header">
             <div class="site-main__breadcumbs">
-                <a href="<?php echo esc_url(home_url('/')); ?>">Главная</a> / <span><a href="<?php echo esc_url(home_url('/')); ?>news">Новости</a></span>
+                <a href="<?php echo esc_url(home_url('/')); ?>">Main</a> / <span><a href="<?php echo esc_url(home_url('/')); ?>news">News</a></span>
             </div>
         </header>
 
@@ -76,7 +76,7 @@
 
     <aside class="side-nav">
         <h2 class="side-nav__title">
-            Новости
+            News
         </h2>
 
         <?php 
